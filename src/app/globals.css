@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans KR", system-ui, sans-serif;
+  --font-serif: "Noto Serif KR", serif;
+
+  --color-brand-navy: #1e3a8a;
+  --color-brand-gold: #d4af37;
+  --color-brand-gray: #f3f4f6;
+  --color-brand-text: #1f2937;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #1f2937;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
