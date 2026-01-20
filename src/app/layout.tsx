@@ -41,6 +41,8 @@ export const metadata: Metadata = {
   },
 };
 
+import GoogleAnalytics from "@/components/GoogleAnalytics";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -51,6 +53,7 @@ export default function RootLayout({
       <body
         className={`${notoSansKr.className} ${notoSerifKr.variable} antialiased bg-gray-100 min-h-screen flex justify-center py-0 md:py-10`}
       >
+        <GoogleAnalytics gaId="G-8CL9TDVEHJ" />
         <div className="w-full md:max-w-screen-lg bg-white min-h-screen md:min-h-[calc(100vh-80px)] shadow-2xl relative md:rounded-[2.5rem] overflow-hidden flex flex-col">
           {children}
         </div>
