@@ -141,10 +141,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="bg-gray-100 py-8 text-center text-xs text-gray-400">
-        <p className="mb-2">AI Naming Lab</p>
-        <p>Copyright © 2024. All rights reserved.</p>
-      </footer>
+
     </main>
   );
 }
