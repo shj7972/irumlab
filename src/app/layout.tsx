@@ -42,6 +42,7 @@ export const metadata: Metadata = {
 };
 
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import BannerExchange from "@/components/BannerExchange";
 
 export default function RootLayout({
   children,
@@ -55,7 +56,10 @@ export default function RootLayout({
       >
         <GoogleAnalytics gaId="G-8CL9TDVEHJ" />
         <div className="w-full md:max-w-screen-lg bg-white min-h-screen md:min-h-[calc(100vh-80px)] shadow-2xl relative md:rounded-[2.5rem] overflow-hidden flex flex-col">
-          {children}
+          <div className="flex-grow">
+            {children}
+          </div>
+          <BannerExchange />
         </div>
       </body>
     </html>
