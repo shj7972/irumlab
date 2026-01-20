@@ -46,7 +46,7 @@ const OHAENG_MAP: Record<string, string> = {
     인: "wood", 묘: "wood",
     진: "earth", 사: "fire",
     오: "fire", 미: "earth",
-    신: "metal", 유: "metal",
+    유: "metal",
     술: "earth", 해: "water",
 };
 
