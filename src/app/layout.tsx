@@ -15,8 +15,25 @@ const notoSerifKr = Noto_Serif_KR({
 });
 
 export const metadata: Metadata = {
-  title: "AI 정통 작명소 - 사주명리학 기반",
-  description: "사주명리학 기반 정통 작명 서비스를 AI로 경험해보세요.",
+  metadataBase: new URL("https://irumlab.com"),
+  title: {
+    default: "이룸랩 (Irum Lab) - AI 사주 작명소",
+    template: "%s | 이룸랩 (Irum Lab)",
+  },
+  description: "사주명리학 기반 정통 작명과 AI 브랜딩을 한 번에. 3분 만에 평생 불릴 최고의 이름을 만나보세요.",
+  keywords: ["작명", "개명", "AI작명", "영어이름", "브랜드네이밍", "사주작명", "무료작명"],
+  openGraph: {
+    title: "이룸랩 (Irum Lab) - AI 사주 작명소",
+    description: "사주명리학과 AI가 만드는 최고의 이름. 3분 만에 확인하세요.",
+    url: "https://irumlab.com",
+    siteName: "이룸랩 (Irum Lab)",
+    locale: "ko_KR",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
