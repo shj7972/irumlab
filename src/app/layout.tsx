@@ -43,7 +43,6 @@ export const metadata: Metadata = {
 
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import BannerExchange from "@/components/BannerExchange";
-import AdSense from "@/components/AdSense";
 import Footer from "@/components/Footer";
 
 export default function RootLayout({
@@ -53,10 +52,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2947913248390883"
+          crossOrigin="anonymous"
+        ></script>
+      </head>
       <body
         className={`${notoSansKr.className} ${notoSerifKr.variable} antialiased bg-gray-100 min-h-screen flex justify-center py-0 md:py-10`}
       >
-        <AdSense />
         <GoogleAnalytics gaId="G-8CL9TDVEHJ" />
         <div className="w-full md:max-w-screen-lg bg-white min-h-screen md:min-h-[calc(100vh-80px)] shadow-2xl relative md:rounded-[2.5rem] overflow-hidden flex flex-col">
           <div className="flex-grow">
