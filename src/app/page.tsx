@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import FAQ from "@/components/FAQ";
 import Link from "next/link";
 import { Sparkles, Globe, Rocket, ChevronRight, Star, ShieldCheck, Zap } from "lucide-react";
 
@@ -142,6 +143,27 @@ export default function Home() {
       </section>
 
 
+      {/* Naming Science Guide */}
+      <section style={{ backgroundColor: '#f9fafb', padding: '40px 20px', marginTop: '60px', borderTop: '1px solid #e5e7eb' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto', color: '#6b7280', fontSize: '0.875rem', lineHeight: '1.6' }}>
+          <h3 style={{ color: '#374151', fontWeight: '700', fontSize: '1rem', marginBottom: '12px' }}>
+            성명학(姓名學) 가이드: 운명을 바꾸는 이름의 힘
+          </h3>
+          <p style={{ marginBottom: '10px' }}>
+            사주(四柱)가 태어날 때 정해지는 '선천적인 그릇'이라면, 이름은 그 그릇에 무엇을 담을지 결정하는 '후천적인 노력'입니다.
+            성명학은 단순한 통계가 아닌, <strong>소리의 파장(음령오행)</strong>, <strong>한자의 뜻(자원오행)</strong>,
+            그리고 <strong>수리적인 조화(원형이정)</strong>를 통해 사주의 불균형을 조절하는 학문입니다.
+          </p>
+          <p>
+            본 서비스는 정통 성명학 이론인 <strong>자원오행(변화하는 기운)</strong>과 <strong>음령오행(소리의 기운)</strong>,
+            <strong>수리성명학(획수의 길흉)</strong>을 모두 분석합니다. AI 알고리즘을 통해 당신의 사주에서
+            가장 부족한 오행(용신)을 정확히 찾아내어, 인생의 흐름을 순탄하게 돕는 최적의 이름을 추천해 드립니다.
+          </p>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <FAQ />
     </main>
   );
 }
