@@ -35,6 +35,12 @@ const BANNERS: Banner[] = [
         imgSrc: "https://promptgenie.kr/images/banner_link_new_234x60.png",
         alt: "PromptGenie - AI Prompt Library",
     },
+    {
+        id: 5,
+        url: "https://nutrimatch.kr",
+        imgSrc: "https://nutrimatch.kr/banner_link_234x60.png",
+        alt: "내 몸이 진짜 원하는 영양제는? Nutri-Match 분석 결과 보기",
+    },
 ];
 
 export default function BannerExchange() {
