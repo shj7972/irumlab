@@ -41,6 +41,12 @@ const BANNERS: Banner[] = [
         imgSrc: "https://nutrimatch.kr/banner_link_234x60.png",
         alt: "내 몸이 진짜 원하는 영양제는? Nutri-Match 분석 결과 보기",
     },
+    {
+        id: 6,
+        url: "https://moneymatch.kr",
+        imgSrc: "https://moneymatch.kr/banner_link_234x60.png",
+        alt: "놓치면 손해 보는 정부지원금, 3초 만에 찾기 - Money Match",
+    },
 ];
 
 export default function BannerExchange() {
