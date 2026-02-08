@@ -1,11 +1,15 @@
 import Header from "@/components/Header";
 import FAQ from "@/components/FAQ";
+import { OrganizationJsonLd, WebApplicationJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import Link from "next/link";
 import { Sparkles, Globe, Rocket, ChevronRight, Star, ShieldCheck, Zap } from "lucide-react";
 
 export default function Home() {
   return (
     <main className="flex flex-col min-h-screen bg-gray-50">
+      <OrganizationJsonLd />
+      <WebApplicationJsonLd />
+      <FAQJsonLd />
       <Header />
 
       {/* Hero Section - Baby Naming Main */}

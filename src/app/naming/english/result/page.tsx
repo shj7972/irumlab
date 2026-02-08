@@ -1,8 +1,13 @@
-
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Link from "next/link";
 import { generateAdvancedEnglishNames } from "@/lib/english-naming-advanced";
 import { RefreshCcw, Copy, Gamepad2, Instagram, Youtube, User, Star, Check } from "lucide-react";
+
+export const metadata: Metadata = {
+    title: "영어 닉네임 결과",
+    robots: { index: false, follow: false },
+};
 
 interface PageProps {
     searchParams: Promise<{

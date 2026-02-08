@@ -1,8 +1,13 @@
-
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Link from "next/link";
 import { generateAdvancedBrandNames } from "@/lib/brand-naming-advanced";
 import { RefreshCcw, CheckCircle, AlertTriangle, XCircle, Search, Palette, BarChart } from "lucide-react";
+
+export const metadata: Metadata = {
+    title: "브랜드 네이밍 결과",
+    robots: { index: false, follow: false },
+};
 
 interface PageProps {
     searchParams: Promise<{

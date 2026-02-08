@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import LoadingSequence from "@/components/LoadingSequence";
 import { Suspense } from "react";
+
+export const metadata: Metadata = {
+    title: "분석 중",
+    robots: { index: false, follow: false },
+};
 
 export default function AnalysisPage() {
     return (

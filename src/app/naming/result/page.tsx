@@ -1,8 +1,14 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import { CheckCircle } from "lucide-react";
 import { calculateSaju, calculateOhaengDistribution, findRecommendedElement, OHAENG_KOREAN } from "@/lib/saju";
 import { generateNames } from "@/lib/naming";
 import ResultContent from "@/components/ResultContent";
+
+export const metadata: Metadata = {
+    title: "작명 결과",
+    robots: { index: false, follow: false },
+};
 
 interface PageProps {
     searchParams: Promise<{

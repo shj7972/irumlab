@@ -79,6 +79,7 @@ export default function BannerExchange() {
                                 alt={banner.alt}
                                 width={234}
                                 height={60}
+                                loading="lazy"
                                 className="rounded-md border border-gray-100"
                                 style={{ width: "234px", height: "60px", objectFit: "cover" }}
                             />
