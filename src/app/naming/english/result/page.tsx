@@ -1,24 +1,13 @@
-import type { Metadata } from "next";
+"use client";
+
+import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import Header from "@/components/Header";
 import Link from "next/link";
 import { generateAdvancedEnglishNames } from "@/lib/english-naming-advanced";
-import { RefreshCcw, Copy, Gamepad2, Instagram, Youtube, User, Star, Check } from "lucide-react";
+import { RefreshCcw, Copy, Gamepad2, Instagram, Youtube, User, Star } from "lucide-react";
 
-export const metadata: Metadata = {
-    title: "영어 닉네임 결과",
-    robots: { index: false, follow: false },
-};
-
-interface PageProps {
-    searchParams: Promise<{
-        platform?: string;
-        gender?: string;
-        styles?: string;
-        keywords?: string;
-    }>;
-}
-
-const PLATFORM_ICONS: Record<string, any> = {
+const PLATFORM_ICONS: Record<string, React.ElementType> = {
     game: Gamepad2,
     instagram: Instagram,
     youtube: Youtube,
@@ -32,13 +21,13 @@ const PLATFORM_NAMES: Record<string, string> = {
     general: "Nickname"
 };
 
-export default async function AdvancedEnglishResultPage(props: PageProps) {
-    const params = await props.searchParams;
+function EnglishResultPageInner() {
+    const searchParams = useSearchParams();
     const input = {
-        platform: params.platform || "game",
-        gender: params.gender || "neutral",
-        styles: params.styles ? params.styles.split(",") : [],
-        keywords: params.keywords || ""
+        platform: searchParams.get("platform") ?? "game",
+        gender: searchParams.get("gender") ?? "neutral",
+        styles: searchParams.get("styles") ? searchParams.get("styles")!.split(",") : [],
+        keywords: searchParams.get("keywords") ?? ""
     };
 
     const names = generateAdvancedEnglishNames(input);
@@ -70,24 +59,20 @@ export default async function AdvancedEnglishResultPage(props: PageProps) {
                 <div className="space-y-4">
                     {names.map((result, idx) => (
                         <div key={idx} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 relative overflow-hidden ring-1 ring-gray-100 hover:ring-purple-200 transition-all group">
-
                             <div className="flex justify-between items-start mb-2">
                                 <h3 className="text-2xl font-bold text-gray-900 tracking-tight">
                                     {result.name}
                                 </h3>
-                                {/* Score Badge */}
                                 <div className="flex items-center gap-1 bg-yellow-50 px-2 py-1 rounded-lg border border-yellow-100">
                                     <Star size={12} className="text-yellow-500 fill-yellow-500" />
                                     <span className="text-xs font-bold text-yellow-700">{result.availability.score}</span>
                                 </div>
                             </div>
 
-                            <p className="text-purple-600 font-medium text-sm mb-3">
-                                {result.meaning}
-                            </p>
+                            <p className="text-purple-600 font-medium text-sm mb-3">{result.meaning}</p>
 
                             <p className="text-gray-500 text-xs leading-relaxed mb-4 bg-gray-50 p-3 rounded-lg">
-                                "{result.story}"
+                                &quot;{result.story}&quot;
                             </p>
 
                             <div className="flex items-center justify-between mt-auto">
@@ -117,5 +102,13 @@ export default async function AdvancedEnglishResultPage(props: PageProps) {
                 </div>
             </main>
         </div>
+    );
+}
+
+export default function AdvancedEnglishResultPage() {
+    return (
+        <Suspense fallback={<div className="min-h-screen flex items-center justify-center">로딩 중...</div>}>
+            <EnglishResultPageInner />
+        </Suspense>
     );
 }

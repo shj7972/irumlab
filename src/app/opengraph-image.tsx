@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og";
 
+export const dynamic = "force-static";
 export const alt = "이룸랩 - AI 사주 작명소";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";

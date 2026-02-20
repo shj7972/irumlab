@@ -1,39 +1,27 @@
-import type { Metadata } from "next";
+"use client";
+
+import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import Header from "@/components/Header";
 import { CheckCircle } from "lucide-react";
 import { calculateSaju, calculateOhaengDistribution, findRecommendedElement, OHAENG_KOREAN } from "@/lib/saju";
 import { generateNames } from "@/lib/naming";
 import ResultContent from "@/components/ResultContent";
 
-export const metadata: Metadata = {
-    title: "작명 결과",
-    robots: { index: false, follow: false },
-};
+function ResultPageInner() {
+    const searchParams = useSearchParams();
+    const lastName = searchParams.get("lastName") ?? "김";
+    const gender = searchParams.get("gender") ?? "male";
+    const birthDate = searchParams.get("birthDate") ?? "2024-01-01";
+    const birthTime = searchParams.get("birthTime") ?? "12:00";
 
-interface PageProps {
-    searchParams: Promise<{
-        lastName?: string;
-        gender?: string;
-        birthDate?: string;
-        birthTime?: string;
-    }>;
-}
-
-export default async function ResultPage(props: PageProps) {
-    const params = await props.searchParams;
-    const { lastName = "김", gender = "male", birthDate = "2024-01-01", birthTime = "12:00" } = params;
-
-    // 1. Calculate Saju (Server Side)
     const saju = calculateSaju(birthDate, birthTime);
     const distribution = calculateOhaengDistribution(saju);
     const recommendedElement = findRecommendedElement(distribution);
-
-    // 2. Generate Names (Target 5)
     const names = generateNames(lastName, gender, recommendedElement, saju);
 
     const freeNames = names.slice(0, 3);
     const lockedNames = names.slice(3, 5);
-
     const recommendedKorean = OHAENG_KOREAN[recommendedElement];
 
     return (
@@ -76,11 +64,19 @@ export default async function ResultPage(props: PageProps) {
                 <ResultContent
                     freeNames={freeNames}
                     lockedNames={lockedNames}
-                    saju={saju} // Pass Saju Data
-                    distribution={distribution} // Pass Ohaeng Data
+                    saju={saju}
+                    distribution={distribution}
                     recommendedElement={recommendedElement}
                 />
             </main>
         </div>
+    );
+}
+
+export default function ResultPage() {
+    return (
+        <Suspense fallback={<div className="min-h-screen flex items-center justify-center">로딩 중...</div>}>
+            <ResultPageInner />
+        </Suspense>
     );
 }
