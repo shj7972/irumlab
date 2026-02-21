@@ -2,7 +2,8 @@ import Header from "@/components/Header";
 import FAQ from "@/components/FAQ";
 import { OrganizationJsonLd, WebApplicationJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import Link from "next/link";
-import { Sparkles, Globe, Rocket, ChevronRight, Star, ShieldCheck, Zap } from "lucide-react";
+import { Sparkles, Globe, Rocket, ChevronRight, Star, ShieldCheck, Zap, BookOpen, Calendar, Heart } from "lucide-react";
+import { getAllPosts } from "@/lib/blog-data";
 
 export default function Home() {
   return (
@@ -88,17 +89,24 @@ export default function Home() {
             </p>
           </Link>
 
-          {/* Saju Info Cards - Hidden on mobile, shown on desktop or adjusted */}
-          <div className="bg-gray-50 p-4 rounded-2xl text-center flex flex-col justify-center">
-            <div className="text-2xl mb-2">📅</div>
-            <div className="text-sm font-bold text-gray-800">정통 만세력</div>
-            <div className="text-xs text-gray-400">정확한 사주 분석</div>
-          </div>
-          <div className="bg-gray-50 p-4 rounded-2xl text-center flex flex-col justify-center">
-            <div className="text-2xl mb-2">⚖️</div>
-            <div className="text-sm font-bold text-gray-800">오행 균형</div>
-            <div className="text-xs text-gray-400">부족한 기운 보완</div>
-          </div>
+          {/* Compatibility Card */}
+          <Link href="/naming/compatibility" className="block bg-white p-5 rounded-2xl shadow-lg shadow-gray-200/50 border border-gray-100 hover:border-pink-200 transition-all group md:col-span-2">
+            <div className="flex items-center gap-4 mb-3">
+              <div className="w-12 h-12 rounded-full bg-pink-50 flex items-center justify-center text-pink-500 group-hover:scale-110 transition-transform">
+                <Heart size={24} strokeWidth={1.5} />
+              </div>
+              <div className="flex-1">
+                <div className="text-xs text-pink-500 font-bold mb-0.5">Name Compatibility</div>
+                <div className="font-bold text-gray-900 text-lg">이름 궁합</div>
+              </div>
+              <div className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-pink-500 group-hover:text-white transition-colors">
+                <ChevronRight size={16} />
+              </div>
+            </div>
+            <p className="text-sm text-gray-500 leading-relaxed">
+              두 이름의 음운오행과 획수를 분석해<br />이름 궁합을 알아보세요.
+            </p>
+          </Link>
         </div>
       </section>
 
@@ -146,6 +154,47 @@ export default function Home() {
         </div>
       </section>
 
+
+      {/* Blog Preview */}
+      <section className="px-6 pb-12">
+        <h2 className="text-center font-bold text-gray-900 mb-8 flex items-center justify-center gap-2">
+          <div className="h-px w-8 bg-gray-300"></div>
+          <span>작명 블로그</span>
+          <div className="h-px w-8 bg-gray-300"></div>
+        </h2>
+        <div className="space-y-3">
+          {getAllPosts().slice(0, 3).map((post) => (
+            <Link
+              key={post.slug}
+              href={`/blog/${post.slug}`}
+              className="block bg-white rounded-xl p-4 border border-gray-100 hover:border-brand-navy/20 hover:shadow-sm transition-all group"
+            >
+              <div className="flex items-center gap-2 mb-2">
+                <span className="px-2 py-0.5 rounded-full bg-blue-50 text-brand-navy text-[10px] font-bold">
+                  {post.category}
+                </span>
+                <span className="flex items-center gap-1 text-gray-400 text-[10px]">
+                  <Calendar size={9} />
+                  {post.date}
+                </span>
+              </div>
+              <h3 className="font-bold text-gray-900 text-sm group-hover:text-brand-navy transition-colors leading-snug">
+                {post.title}
+              </h3>
+            </Link>
+          ))}
+        </div>
+        <div className="text-center mt-4">
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-brand-navy transition-colors"
+          >
+            <BookOpen size={14} />
+            <span>블로그 더보기</span>
+            <ChevronRight size={14} />
+          </Link>
+        </div>
+      </section>
 
       {/* Naming Science Guide */}
       <section style={{ backgroundColor: '#f9fafb', padding: '40px 20px', marginTop: '60px', borderTop: '1px solid #e5e7eb' }}>

@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Link from "next/link";
 import { generateAdvancedBrandNames } from "@/lib/brand-naming-advanced";
 import { RefreshCcw, CheckCircle, AlertTriangle, Search, Palette, BarChart } from "lucide-react";
+import ShareButtons from "@/components/ShareButtons";
 
 function VerificationItem({ label, status, warning }: { label: string, status: boolean, warning?: string }) {
     return (
@@ -139,7 +140,12 @@ function BrandResultPageInner() {
                     ))}
                 </div>
 
-                <div className="mt-10 text-center">
+                <div className="mt-10 flex flex-col items-center gap-4">
+                    <ShareButtons
+                        title="AI 브랜드 네이밍 결과 - 이룸랩"
+                        description="AI가 분석한 최적의 브랜드 이름을 확인해 보세요!"
+                        type="brand"
+                    />
                     <Link
                         href="/naming/brand"
                         className="inline-flex items-center gap-2 text-gray-500 text-sm hover:text-indigo-600 transition-colors bg-white px-5 py-3 rounded-full border border-gray-200 shadow-sm"

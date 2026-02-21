@@ -6,6 +6,8 @@ import Link from "next/link";
 import { NamingResult } from "@/lib/naming";
 import { Saju, OhaengDistribution } from "@/lib/saju";
 import PremiumAnalysis from "./PremiumAnalysis";
+import ShareButtons from "./ShareButtons";
+import { trackPremiumUnlockStart, trackPremiumUnlockComplete, trackNamingResultView } from "@/lib/analytics";
 
 interface ResultContentProps {
     freeNames: NamingResult[];
@@ -18,14 +20,22 @@ interface ResultContentProps {
 export default function ResultContent({ freeNames, lockedNames, saju, distribution, recommendedElement }: ResultContentProps) {
     const [isUnlocked, setIsUnlocked] = useState(false);
     const [isAdPlaying, setIsAdPlaying] = useState(false);
+    const [tracked, setTracked] = useState(false);
+
+    if (!tracked) {
+        trackNamingResultView("baby");
+        setTracked(true);
+    }
 
     const handleUnlock = () => {
+        trackPremiumUnlockStart();
         setIsAdPlaying(true);
 
         // Simulate Ad Duration (3 seconds)
         setTimeout(() => {
             setIsAdPlaying(false);
             setIsUnlocked(true);
+            trackPremiumUnlockComplete();
         }, 3000);
     };
 
@@ -191,8 +201,13 @@ export default function ResultContent({ freeNames, lockedNames, saju, distributi
                 </div>
             )}
 
-            {/* Action */}
-            <div className="px-5 mt-10 mb-12 text-center">
+            {/* Share & Action */}
+            <div className="px-5 mt-10 mb-12 flex flex-col items-center gap-4">
+                <ShareButtons
+                    title="AI 사주 작명 결과 - 이룸랩"
+                    description="사주명리학 기반 AI가 추천한 최고의 이름을 확인해 보세요!"
+                    type="naming"
+                />
                 <Link
                     href="/naming"
                     className="inline-flex items-center gap-2 text-gray-400 text-sm hover:text-gray-600 transition-colors bg-white px-4 py-2 rounded-full border border-gray-200 shadow-sm"

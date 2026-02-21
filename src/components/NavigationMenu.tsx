@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
-import { Menu, X, ChevronRight, Home, Sparkles, Globe, Rocket } from "lucide-react";
+import { Menu, X, ChevronRight, Home, Sparkles, Globe, Rocket, BookOpen, Heart } from "lucide-react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -11,6 +11,8 @@ const MENU_ITEMS = [
     { label: "AI 아기 작명", href: "/naming", icon: Sparkles },
     { label: "영어 닉네임", href: "/naming/english", icon: Globe },
     { label: "브랜드 네이밍", href: "/naming/brand", icon: Rocket },
+    { label: "이름 궁합", href: "/naming/compatibility", icon: Heart },
+    { label: "작명 블로그", href: "/blog", icon: BookOpen },
 ];
 
 export default function NavigationMenu() {

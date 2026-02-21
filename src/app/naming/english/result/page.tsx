@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Link from "next/link";
 import { generateAdvancedEnglishNames } from "@/lib/english-naming-advanced";
 import { RefreshCcw, Copy, Gamepad2, Instagram, Youtube, User, Star } from "lucide-react";
+import ShareButtons from "@/components/ShareButtons";
 
 const PLATFORM_ICONS: Record<string, React.ElementType> = {
     game: Gamepad2,
@@ -91,7 +92,12 @@ function EnglishResultPageInner() {
                     ))}
                 </div>
 
-                <div className="mt-10 text-center">
+                <div className="mt-10 flex flex-col items-center gap-4">
+                    <ShareButtons
+                        title="AI 영어 닉네임 추천 - 이룸랩"
+                        description="나만의 센스있는 영어 닉네임을 AI가 추천해 드려요!"
+                        type="english"
+                    />
                     <Link
                         href="/naming/english"
                         className="inline-flex items-center gap-2 text-gray-500 text-sm hover:text-purple-600 transition-colors bg-white px-5 py-3 rounded-full border border-gray-200 shadow-sm"

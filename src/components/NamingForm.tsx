@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Calendar, Clock, User } from "lucide-react";
 import { motion } from "framer-motion";
+import { trackNamingFormSubmit } from "@/lib/analytics";
 
 export default function NamingForm() {
     const router = useRouter();
@@ -19,6 +20,7 @@ export default function NamingForm() {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         setLoading(true);
+        trackNamingFormSubmit("baby");
 
         // Simulate query string creation (in real app, use context or state manager)
         const query = new URLSearchParams(formData as any).toString();
