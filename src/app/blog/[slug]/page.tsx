@@ -11,8 +11,9 @@ export function generateStaticParams() {
     }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-    const post = getPostBySlug(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+    const { slug } = await params;
+    const post = getPostBySlug(slug);
     if (!post) return {};
 
     return {
@@ -28,11 +29,12 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     };
 }
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
-    const post = getPostBySlug(params.slug);
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params;
+    const post = getPostBySlug(slug);
     if (!post) notFound();
 
-    const allPosts = getAllPosts().filter(p => p.slug !== params.slug).slice(0, 2);
+    const allPosts = getAllPosts().filter(p => p.slug !== slug).slice(0, 2);
 
     return (
         <div className="min-h-screen bg-gray-50 flex flex-col">
