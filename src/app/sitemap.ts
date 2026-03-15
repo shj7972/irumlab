@@ -35,8 +35,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         {
             url: `${baseUrl}/naming/english`,
             lastModified: new Date(),
-            changeFrequency: 'weekly',
-            priority: 0.8,
+            changeFrequency: 'daily',
+            priority: 0.95,
         },
         {
             url: `${baseUrl}/naming/compatibility`,

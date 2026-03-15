@@ -1,3 +1,75 @@
+export function EnglishNamingJsonLd() {
+    const appData = {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        name: "영어 닉네임 제조기·생성기 - 이룸랩",
+        url: "https://irumlab.com/naming/english",
+        applicationCategory: "LifestyleApplication",
+        operatingSystem: "All",
+        offers: {
+            "@type": "Offer",
+            price: "0",
+            priceCurrency: "KRW",
+        },
+        description:
+            "게임, 인스타그램, 유튜브 등 플랫폼별 맞춤 영어 닉네임을 AI가 즉시 제조해 드립니다. 무료 영어 닉네임 생성기.",
+        inLanguage: "ko",
+        keywords: "영어 닉네임 제조기, 영어 닉네임 생성기, 게임 영어 닉네임 제조기, 영어 이름 생성기",
+    };
+
+    const faqData = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: [
+            {
+                "@type": "Question",
+                name: "영어 닉네임 제조기는 무료인가요?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "네, 완전 무료입니다. 회원가입 없이 플랫폼과 원하는 스타일을 선택하면 AI가 즉시 영어 닉네임을 생성해 드립니다.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "게임용 영어 닉네임은 어떻게 만드나요?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "플랫폼을 '게임'으로 선택하고 원하는 스타일(강렬한/감성적/귀여운)과 키워드를 입력하면 롤, 배그, 발로란트 등 게임에 어울리는 영어 닉네임을 제조해 드립니다.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "인스타그램 영어 닉네임도 만들 수 있나요?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "네, 인스타그램 플랫폼을 선택하면 감성적이고 세련된 인스타그램용 영어 이름을 생성해 드립니다.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "영어 닉네임 생성 결과는 몇 개나 받을 수 있나요?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "AI가 조건에 맞는 영어 닉네임을 여러 개 추천해 드리므로, 가장 마음에 드는 것을 선택하시면 됩니다.",
+                },
+            },
+        ],
+    };
+
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(appData) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
+            />
+        </>
+    );
+}
+
 export function OrganizationJsonLd() {
     const data = {
         "@context": "https://schema.org",

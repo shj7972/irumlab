@@ -116,6 +116,119 @@ export const BLOG_POSTS: BlogPost[] = [
 `
     },
     {
+        slug: "game-english-nickname-ideas",
+        title: "게임 영어 닉네임 제조기로 만드는 강렬한 닉네임 200선",
+        description: "롤, 배그, 발로란트, 오버워치 등 게임별 최강 영어 닉네임 아이디어와 AI 제조기 활용법. 강렬하고 기억에 남는 게임 닉네임을 골라보세요.",
+        date: "2026-03-10",
+        category: "영어 닉네임",
+        tags: ["게임닉네임", "영어닉네임제조기", "롤닉네임", "배그닉네임", "발로란트닉네임"],
+        readingTime: 6,
+        content: `
+<h2>게임 영어 닉네임, 왜 중요한가?</h2>
+<p>게임에서 닉네임은 나의 첫인상입니다. 강렬하고 독창적인 영어 닉네임은 상대방에게 심리적 압박감을 주고, 팀원에게 신뢰감을 줍니다. 프로게이머들의 닉네임을 보면 짧고 강한 단어, 또는 독특한 조합을 사용하는 경우가 많습니다.</p>
+
+<h3>장르별 게임 영어 닉네임 스타일</h3>
+
+<h4>MOBA (롤, 도타2)</h4>
+<p>전략과 실력을 강조하는 닉네임이 인기입니다. 단일 강한 단어나 신화·역사 속 인물명을 활용합니다.</p>
+<ul>
+<li><strong>강렬한 단어형</strong>: Viper, Shadow, Phantom, Wraith, Nemesis</li>
+<li><strong>신화 기반</strong>: Ares, Odin, Thor, Hades, Fenrir</li>
+<li><strong>공포/어둠 계열</strong>: Abyssal, Void, Dusk, Eclipse, Raven</li>
+</ul>
+
+<h4>배틀로얄 (배그, 에이펙스, 포트나이트)</h4>
+<p>생존과 사냥을 연상시키는 단어가 잘 어울립니다.</p>
+<ul>
+<li><strong>사냥꾼 스타일</strong>: Hunter, Apex, Predator, Sniper, Reaper</li>
+<li><strong>자연/동물</strong>: Wolf, Eagle, Hawk, Cobra, Lynx</li>
+<li><strong>군사 계열</strong>: Ghost, Bravo, Delta, Recon, Ranger</li>
+</ul>
+
+<h4>FPS (발로란트, 오버워치, CS2)</h4>
+<p>빠른 반응과 정밀함을 강조하는 닉네임이 선호됩니다.</p>
+<ul>
+<li><strong>속도/정밀</strong>: Flash, Blitz, Swift, Pixel, Ace</li>
+<li><strong>냉혹한 이미지</strong>: Frost, Zero, Null, Static, Cipher</li>
+</ul>
+
+<h3>좋은 게임 닉네임 제조 공식</h3>
+<p>기억에 남는 게임 영어 닉네임을 만드는 공식이 있습니다:</p>
+<ol>
+<li><strong>[형용사] + [명사]</strong>: DarkWolf, SilentBlade, IronGhost</li>
+<li><strong>[신화/역사 이름] + 숫자</strong>: Ares77, Thor99, Fenrir0</li>
+<li><strong>단일 강한 단어</strong>: Phantom, Viper, Eclipse, Nemesis</li>
+<li><strong>컨셉 기반 조합</strong>: NightReaper, VoidWalker, StormRider</li>
+</ol>
+
+<h3>피해야 할 게임 닉네임 패턴</h3>
+<ul>
+<li>너무 흔한 단어 (King, Pro, Best, Master) — 이미 수백만 명이 사용 중</li>
+<li>발음하기 어려운 철자 조합 — 팀원이 콜하기 어려움</li>
+<li>너무 긴 닉네임 — 채팅창에서 잘림, 기억하기 어려움</li>
+</ul>
+
+<h3>AI 영어 닉네임 제조기 활용법</h3>
+<p>이룸랩의 AI 영어 닉네임 제조기를 활용하면 플랫폼(게임 종류), 원하는 분위기(강렬한/감성적/귀여운), 좋아하는 키워드를 입력해 나만의 독창적인 영어 닉네임을 즉시 제조할 수 있습니다. 수천 가지 조합 중 나에게 딱 맞는 닉네임을 찾아보세요.</p>
+`
+    },
+    {
+        slug: "instagram-english-nickname-ideas",
+        title: "인스타그램 영어 닉네임 추천: 감성적이고 세련된 영어 이름 모음",
+        description: "인스타그램 감성에 맞는 영어 닉네임 아이디어 총정리. 팔로워를 끌어당기는 세련된 영어 이름 스타일과 AI 영어 닉네임 생성기 활용 팁을 공유합니다.",
+        date: "2026-03-05",
+        category: "영어 닉네임",
+        tags: ["인스타그램닉네임", "영어닉네임", "영어이름생성기", "SNS닉네임", "감성닉네임"],
+        readingTime: 5,
+        content: `
+<h2>인스타그램에 어울리는 영어 닉네임이 따로 있다</h2>
+<p>인스타그램은 감성과 심미성이 중요한 플랫폼입니다. 게임용 강렬한 닉네임보다는 <strong>부드럽고 기억에 남으며 세련된</strong> 영어 이름이 팔로워에게 더 좋은 인상을 줍니다. 좋은 인스타그램 영어 닉네임은 계정의 분위기를 결정하는 브랜딩이기도 합니다.</p>
+
+<h3>인스타그램 영어 닉네임 스타일별 추천</h3>
+
+<h4>감성/무드 계열</h4>
+<p>감정과 분위기를 담은 단어들은 팔로워에게 깊은 인상을 남깁니다.</p>
+<ul>
+<li>Luna, Lyra, Aurora, Celeste, Iris</li>
+<li>Aura, Haze, Mist, Dew, Soleil</li>
+<li>Velvet, Linen, Satin, Mellow, Serene</li>
+</ul>
+
+<h4>자연 영감 계열</h4>
+<p>자연물에서 따온 이름은 트렌디하고 유니크합니다.</p>
+<ul>
+<li>Fern, Ivy, Sage, Willow, Cedar</li>
+<li>River, Stone, Cliff, Ember, Flint</li>
+<li>Bloom, Petal, Frost, Dawn, Dusk</li>
+</ul>
+
+<h4>미니멀/쿨한 계열</h4>
+<p>짧고 강렬한 단어 하나로 개성을 표현합니다.</p>
+<ul>
+<li>Zen, Ash, Rex, Nox, Rye</li>
+<li>Ace, Bay, Cay, Dax, Fox</li>
+</ul>
+
+<h4>부계정/익명 계열</h4>
+<p>본계정과 분위기를 다르게 가져가고 싶을 때 사용하는 스타일입니다.</p>
+<ul>
+<li>Ghost, Echo, Mirror, Alias, Anon</li>
+<li>Blank, Void, Static, Glitch, Flux</li>
+</ul>
+
+<h3>인스타그램 닉네임 만들기 팁</h3>
+<ol>
+<li><strong>계정 콘셉트와 일치</strong>시키세요 — 일상 계정이라면 친근한 이름, 사진 계정이라면 감성적인 이름</li>
+<li><strong>2~3음절</strong>이 가장 기억하기 좋습니다</li>
+<li><strong>숫자 사용은 최소화</strong> — 뒤에 _나 숫자를 붙이면 기억하기 어려워집니다</li>
+<li><strong>구글에 검색</strong>해서 동명의 유명인이나 브랜드가 없는지 확인하세요</li>
+</ol>
+
+<h3>AI 영어 닉네임 생성기로 나만의 이름 찾기</h3>
+<p>이룸랩의 영어 닉네임 생성기는 인스타그램 플랫폼을 선택하고 원하는 분위기(감성적/귀여운/쿨한)와 좋아하는 키워드를 입력하면 AI가 나에게 딱 맞는 영어 닉네임을 즉시 추천해 드립니다. 수백 가지 조합 중 나만의 고유한 영어 이름을 찾아보세요.</p>
+`
+    },
+    {
         slug: "brand-naming-success-tips",
         title: "성공하는 브랜드 이름 짓기: 5가지 핵심 전략",
         description: "매출을 올리는 브랜드 네이밍의 비밀. 기억하기 쉽고 검색에 강한 브랜드 이름을 만드는 실전 전략을 공유합니다.",

@@ -163,6 +163,37 @@ export default function EnglishNamingPage() {
                 </section>
             </main>
 
+            {/* SEO Content Section */}
+            <section className="mb-8 mt-4 px-1">
+                <div className="bg-gray-50 rounded-2xl p-5 text-sm text-gray-600 leading-relaxed space-y-4">
+                    <div>
+                        <h2 className="font-bold text-gray-800 mb-2">영어 닉네임 제조기란?</h2>
+                        <p>
+                            AI가 나의 성격, 분위기, 플랫폼 용도에 맞는 영어 닉네임을 즉시 만들어주는 무료 서비스입니다.
+                            게임용 강렬한 닉네임부터 인스타그램·유튜브용 감성 영어 이름까지, 원하는 스타일로 제조할 수 있습니다.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 className="font-bold text-gray-800 mb-2">플랫폼별 영어 닉네임 추천 스타일</h2>
+                        <ul className="space-y-1 list-none">
+                            <li><span className="font-semibold text-purple-700">게임 닉네임</span> — 롤(LoL), 배틀그라운드(배그), 발로란트 등에서 강렬하고 기억에 남는 영어 닉네임이 유리합니다. Shadow, Void, Storm 계열의 강한 단어가 인기입니다.</li>
+                            <li><span className="font-semibold text-pink-600">인스타그램 닉네임</span> — 감성적이고 세련된 영어 이름이 팔로워에게 좋은 인상을 줍니다. Luna, Aura, Velvet 같은 심미적 단어가 잘 어울립니다.</li>
+                            <li><span className="font-semibold text-red-500">유튜브/방송 닉네임</span> — 기억하기 쉽고 검색이 잘 되는 2~3음절 영어 닉네임을 추천합니다.</li>
+                            <li><span className="font-semibold text-gray-700">영어 이름/메신저</span> — 실제 영어 이름처럼 자연스럽게 쓸 수 있는 닉네임으로, 글로벌 소통에 활용됩니다.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 className="font-bold text-gray-800 mb-2">좋은 영어 닉네임의 조건</h2>
+                        <ul className="space-y-1 list-disc list-inside">
+                            <li>발음하기 쉽고 기억에 남는 2~3음절</li>
+                            <li>나의 개성과 분위기를 담은 단어 선택</li>
+                            <li>플랫폼 규칙에 맞는 글자 수와 특수문자 여부 확인</li>
+                            <li>이미 많이 사용된 닉네임은 피하고 독창성 추구</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
             {/* Bottom CTA */}
             <div className="fixed bottom-0 left-0 right-0 p-5 bg-white/80 backdrop-blur-md border-t border-gray-100 max-w-[480px] mx-auto z-10">
                 <button

@@ -58,15 +58,15 @@ export default function Home() {
                 <Globe size={24} strokeWidth={1.5} />
               </div>
               <div className="flex-1">
-                <div className="text-xs text-purple-600 font-bold mb-0.5">Global Naming</div>
-                <div className="font-bold text-gray-900 text-lg">영어 닉네임</div>
+                <div className="text-xs text-purple-600 font-bold mb-0.5">영어 닉네임 제조기</div>
+                <div className="font-bold text-gray-900 text-lg">영어 닉네임 생성기</div>
               </div>
               <div className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-purple-600 group-hover:text-white transition-colors">
                 <ChevronRight size={16} />
               </div>
             </div>
             <p className="text-sm text-gray-500 leading-relaxed">
-              나의 분위기와 성격에 딱 맞는<br />세련된 영어 이름을 찾아보세요.
+              게임·인스타·유튜브용 영어 닉네임을<br />AI가 즉시 제조해 드립니다.
             </p>
           </Link>
 
