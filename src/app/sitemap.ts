@@ -39,6 +39,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.95,
         },
         {
+            url: `${baseUrl}/naming/english/game`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
+            url: `${baseUrl}/naming/english/instagram`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
+            url: `${baseUrl}/naming/english/youtube`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
             url: `${baseUrl}/naming/compatibility`,
             lastModified: new Date(),
             changeFrequency: 'weekly',

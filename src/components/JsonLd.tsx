@@ -160,3 +160,78 @@ export function FAQJsonLd() {
         />
     );
 }
+
+export function HowToJsonLd() {
+    const data = {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        name: "영어 닉네임 만드는 방법",
+        description:
+            "AI 영어 닉네임 제조기를 이용해 나만의 게임·인스타그램·유튜브용 영어 닉네임을 무료로 만드는 방법",
+        totalTime: "PT2M",
+        estimatedCost: {
+            "@type": "MonetaryAmount",
+            currency: "KRW",
+            value: "0",
+        },
+        step: [
+            {
+                "@type": "HowToStep",
+                name: "플랫폼 선택",
+                text: "영어 닉네임을 사용할 플랫폼을 선택합니다. 게임(롤, 배그, 발로란트), 인스타그램, 유튜브, 일반 중 하나를 고르세요.",
+                position: 1,
+            },
+            {
+                "@type": "HowToStep",
+                name: "키워드 입력",
+                text: "좋아하는 단어나 키워드를 입력합니다. 예: 고양이, 밤, 힙합 등 한글/영어 모두 가능합니다.",
+                position: 2,
+            },
+            {
+                "@type": "HowToStep",
+                name: "스타일 선택",
+                text: "원하는 닉네임 스타일을 선택합니다. 강렬한/쿨한, 감성적인, 귀여운/친근한, 재미/유니크 중 최대 2가지를 고를 수 있습니다.",
+                position: 3,
+            },
+            {
+                "@type": "HowToStep",
+                name: "닉네임 생성",
+                text: "'닉네임 생성하기' 버튼을 누르면 AI가 즉시 나만의 영어 닉네임을 여러 개 추천해 드립니다.",
+                position: 4,
+            },
+            {
+                "@type": "HowToStep",
+                name: "닉네임 선택 및 공유",
+                text: "마음에 드는 닉네임을 선택하고 복사하거나 공유할 수 있습니다.",
+                position: 5,
+            },
+        ],
+    };
+
+    return (
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+        />
+    );
+}
+
+export function BreadcrumbJsonLd({ items }: { items: { name: string; url: string }[] }) {
+    const data = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: items.map((item, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            name: item.name,
+            item: item.url,
+        })),
+    };
+
+    return (
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+        />
+    );
+}

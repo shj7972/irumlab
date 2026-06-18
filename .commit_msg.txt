@@ -1,0 +1,11 @@
+feat(seo): expand SEO keywords and add platform-specific landing pages
+
+- Expand naming/english keywords from 7 to 32
+- Improve title for search intent optimization
+- Add HowTo + BreadcrumbList JSON-LD schemas for rich snippets
+- Add social proof banner, nickname gallery, blog links to english page
+- New landing pages: /naming/english/game, /instagram, /youtube
+- Add 5 blog posts: male/female nicknames, name meaning, baby name 2026, rename guide
+- Expand FAQ from 5 to 8 with English nickname specific questions
+- Update sitemap with 3 new pages at priority 0.9
+- Add internal link CTAs to all new blog posts

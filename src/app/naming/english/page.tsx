@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import Header from "@/components/Header";
-import { User, Sparkles, Gamepad2, Instagram, Youtube, Hash, Zap, Heart, Monitor } from "lucide-react";
+import { User, Sparkles, Gamepad2, Instagram, Youtube, Hash, Zap, Heart, Monitor, BookOpen, ChevronRight, TrendingUp } from "lucide-react";
 
 const PLATFORMS = [
     { id: "game", label: "게임", icon: Gamepad2, desc: "롤, 배그, 발로란트 등" },
@@ -19,14 +20,38 @@ const STYLES = [
     { id: "funny", label: "재미/유니크", icon: Hash },
 ];
 
+// 스타일별 예시 닉네임
+const EXAMPLE_NICKNAMES: Record<string, { label: string; names: string[] }> = {
+    cool: {
+        label: "강렬한/쿨한",
+        names: ["ShadowViper", "NightReaper", "DarkWolf", "IronGhost", "VoidWalker",
+                "StormRider", "Phantom", "Eclipse", "Nemesis", "Wraith"],
+    },
+    aesthetic: {
+        label: "감성적인",
+        names: ["LunaAura", "VelvetMist", "CelesteDew", "AuroraBell", "IvyBloom",
+                "FernGlow", "MellowRise", "SoleilHaze", "WillowDusk", "PetalDrift"],
+    },
+    cute: {
+        label: "귀여운/친근한",
+        names: ["MochiBun", "CottonCloud", "BubblePop", "HoneyBee", "PuffyPaw",
+                "CandyBell", "MapleSprout", "TofuPuff", "DaisyPop", "PeachyGlow"],
+    },
+    funny: {
+        label: "재미/유니크",
+        names: ["ChaosCookie", "GlitchMaster", "PixelWizard", "NoodleKnight", "ByteBandit",
+                "CrispyLord", "WackyFox", "LazyBoss", "SnackyPro", "ZoomZap"],
+    },
+};
+
 export default function EnglishNamingPage() {
     const router = useRouter();
     const [platform, setPlatform] = useState("game");
     const [gender, setGender] = useState("neutral");
     const [selectedStyles, setSelectedStyles] = useState<string[]>([]);
     const [keywords, setKeywords] = useState("");
+    const [exampleTab, setExampleTab] = useState("cool");
 
-    // Toggle style selection (max 2)
     const toggleStyle = (id: string) => {
         if (selectedStyles.includes(id)) {
             setSelectedStyles(prev => prev.filter(s => s !== id));
@@ -44,7 +69,6 @@ export default function EnglishNamingPage() {
             styles: selectedStyles.join(","),
             keywords
         }).toString();
-
         router.push(`/naming/english/result?${query}`);
     };
 
@@ -53,6 +77,14 @@ export default function EnglishNamingPage() {
             <Header />
 
             <main className="flex-1 flex flex-col px-6 py-8 pb-32 max-w-[480px] mx-auto w-full">
+                {/* 소셜 증거 배너 */}
+                <div className="flex items-center gap-2 bg-purple-50 border border-purple-100 rounded-xl px-4 py-2.5 mb-6">
+                    <TrendingUp size={15} className="text-purple-500 shrink-0" />
+                    <p className="text-xs text-purple-700 font-medium">
+                        오늘 <span className="font-bold">1,200명 이상</span>이 영어 닉네임을 만들었어요 🔥
+                    </p>
+                </div>
+
                 <div className="mb-8">
                     <span className="inline-block px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-bold mb-2">
                         Advanced Creator
@@ -140,7 +172,7 @@ export default function EnglishNamingPage() {
                     </div>
                 </section>
 
-                {/* Gender Section (Minor) */}
+                {/* Gender Section */}
                 <section className="mb-8 opacity-70 hover:opacity-100 transition-opacity">
                     <h2 className="text-sm font-bold text-gray-500 mb-3 flex items-center gap-2">
                         <User size={16} />
@@ -161,38 +193,94 @@ export default function EnglishNamingPage() {
                         ))}
                     </div>
                 </section>
-            </main>
 
-            {/* SEO Content Section */}
-            <section className="mb-8 mt-4 px-1">
-                <div className="bg-gray-50 rounded-2xl p-5 text-sm text-gray-600 leading-relaxed space-y-4">
-                    <div>
-                        <h2 className="font-bold text-gray-800 mb-2">영어 닉네임 제조기란?</h2>
-                        <p>
-                            AI가 나의 성격, 분위기, 플랫폼 용도에 맞는 영어 닉네임을 즉시 만들어주는 무료 서비스입니다.
-                            게임용 강렬한 닉네임부터 인스타그램·유튜브용 감성 영어 이름까지, 원하는 스타일로 제조할 수 있습니다.
-                        </p>
+                {/* 닉네임 예시 갤러리 */}
+                <section className="mb-8">
+                    <h2 className="text-sm font-bold text-gray-700 mb-3 flex items-center gap-2">
+                        <Sparkles size={16} />
+                        스타일별 닉네임 예시 미리보기
+                    </h2>
+                    <div className="flex gap-2 mb-3 overflow-x-auto pb-1">
+                        {Object.entries(EXAMPLE_NICKNAMES).map(([key, val]) => (
+                            <button
+                                key={key}
+                                onClick={() => setExampleTab(key)}
+                                className={`shrink-0 px-3 py-1.5 rounded-full text-xs font-bold transition-all ${exampleTab === key
+                                    ? "bg-purple-600 text-white"
+                                    : "bg-white border border-gray-200 text-gray-500"}`}
+                            >
+                                {val.label}
+                            </button>
+                        ))}
                     </div>
-                    <div>
-                        <h2 className="font-bold text-gray-800 mb-2">플랫폼별 영어 닉네임 추천 스타일</h2>
-                        <ul className="space-y-1 list-none">
-                            <li><span className="font-semibold text-purple-700">게임 닉네임</span> — 롤(LoL), 배틀그라운드(배그), 발로란트 등에서 강렬하고 기억에 남는 영어 닉네임이 유리합니다. Shadow, Void, Storm 계열의 강한 단어가 인기입니다.</li>
-                            <li><span className="font-semibold text-pink-600">인스타그램 닉네임</span> — 감성적이고 세련된 영어 이름이 팔로워에게 좋은 인상을 줍니다. Luna, Aura, Velvet 같은 심미적 단어가 잘 어울립니다.</li>
-                            <li><span className="font-semibold text-red-500">유튜브/방송 닉네임</span> — 기억하기 쉽고 검색이 잘 되는 2~3음절 영어 닉네임을 추천합니다.</li>
-                            <li><span className="font-semibold text-gray-700">영어 이름/메신저</span> — 실제 영어 이름처럼 자연스럽게 쓸 수 있는 닉네임으로, 글로벌 소통에 활용됩니다.</li>
-                        </ul>
+                    <div className="flex flex-wrap gap-2">
+                        {EXAMPLE_NICKNAMES[exampleTab].names.map((name) => (
+                            <span
+                                key={name}
+                                className="px-3 py-1.5 rounded-lg bg-white border border-purple-100 text-purple-700 text-sm font-mono font-medium shadow-sm"
+                            >
+                                {name}
+                            </span>
+                        ))}
                     </div>
-                    <div>
-                        <h2 className="font-bold text-gray-800 mb-2">좋은 영어 닉네임의 조건</h2>
-                        <ul className="space-y-1 list-disc list-inside">
-                            <li>발음하기 쉽고 기억에 남는 2~3음절</li>
-                            <li>나의 개성과 분위기를 담은 단어 선택</li>
-                            <li>플랫폼 규칙에 맞는 글자 수와 특수문자 여부 확인</li>
-                            <li>이미 많이 사용된 닉네임은 피하고 독창성 추구</li>
-                        </ul>
+                    <p className="text-[11px] text-gray-400 mt-2 ml-1">* AI가 생성하는 결과는 매번 새로운 조합으로 달라집니다.</p>
+                </section>
+
+                {/* SEO Content Section */}
+                <section className="mb-8 mt-4 px-1">
+                    <div className="bg-gray-50 rounded-2xl p-5 text-sm text-gray-600 leading-relaxed space-y-4">
+                        <div>
+                            <h2 className="font-bold text-gray-800 mb-2">영어 닉네임 제조기란?</h2>
+                            <p>
+                                AI가 나의 성격, 분위기, 플랫폼 용도에 맞는 영어 닉네임을 즉시 만들어주는 무료 서비스입니다.
+                                게임용 강렬한 닉네임부터 인스타그램·유튜브용 감성 영어 이름까지, 원하는 스타일로 제조할 수 있습니다.
+                            </p>
+                        </div>
+                        <div>
+                            <h2 className="font-bold text-gray-800 mb-2">플랫폼별 영어 닉네임 추천 스타일</h2>
+                            <ul className="space-y-1 list-none">
+                                <li><span className="font-semibold text-purple-700">게임 닉네임</span> — 롤(LoL), 배틀그라운드(배그), 발로란트 등에서 강렬하고 기억에 남는 영어 닉네임이 유리합니다. Shadow, Void, Storm 계열의 강한 단어가 인기입니다.</li>
+                                <li><span className="font-semibold text-pink-600">인스타그램 닉네임</span> — 감성적이고 세련된 영어 이름이 팔로워에게 좋은 인상을 줍니다. Luna, Aura, Velvet 같은 심미적 단어가 잘 어울립니다.</li>
+                                <li><span className="font-semibold text-red-500">유튜브/방송 닉네임</span> — 기억하기 쉽고 검색이 잘 되는 2~3음절 영어 닉네임을 추천합니다.</li>
+                                <li><span className="font-semibold text-gray-700">영어 이름/메신저</span> — 실제 영어 이름처럼 자연스럽게 쓸 수 있는 닉네임으로, 글로벌 소통에 활용됩니다.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 className="font-bold text-gray-800 mb-2">좋은 영어 닉네임의 조건</h2>
+                            <ul className="space-y-1 list-disc list-inside">
+                                <li>발음하기 쉽고 기억에 남는 2~3음절</li>
+                                <li>나의 개성과 분위기를 담은 단어 선택</li>
+                                <li>플랫폼 규칙에 맞는 글자 수와 특수문자 여부 확인</li>
+                                <li>이미 많이 사용된 닉네임은 피하고 독창성 추구</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+
+                {/* 관련 블로그 포스트 */}
+                <section className="mb-8">
+                    <h2 className="text-sm font-bold text-gray-700 mb-3 flex items-center gap-2">
+                        <BookOpen size={16} />
+                        관련 글 더 읽기
+                    </h2>
+                    <div className="space-y-2">
+                        <Link href="/blog/game-english-nickname-ideas" className="flex items-center justify-between bg-white rounded-xl p-4 border border-gray-100 hover:border-purple-200 transition-all group">
+                            <div>
+                                <span className="text-[10px] font-bold text-purple-600 block mb-0.5">게임 닉네임</span>
+                                <span className="text-sm font-bold text-gray-800 group-hover:text-purple-600 transition-colors">게임 영어 닉네임 제조기로 만드는 강렬한 닉네임 200선</span>
+                            </div>
+                            <ChevronRight size={16} className="text-gray-300 group-hover:text-purple-500 shrink-0 ml-2" />
+                        </Link>
+                        <Link href="/blog/instagram-english-nickname-ideas" className="flex items-center justify-between bg-white rounded-xl p-4 border border-gray-100 hover:border-pink-200 transition-all group">
+                            <div>
+                                <span className="text-[10px] font-bold text-pink-500 block mb-0.5">인스타그램 닉네임</span>
+                                <span className="text-sm font-bold text-gray-800 group-hover:text-pink-500 transition-colors">인스타그램 영어 닉네임 추천: 감성적이고 세련된 영어 이름 모음</span>
+                            </div>
+                            <ChevronRight size={16} className="text-gray-300 group-hover:text-pink-400 shrink-0 ml-2" />
+                        </Link>
+                    </div>
+                </section>
+            </main>
 
             {/* Bottom CTA */}
             <div className="fixed bottom-0 left-0 right-0 p-5 bg-white/80 backdrop-blur-md border-t border-gray-100 max-w-[480px] mx-auto z-10">
