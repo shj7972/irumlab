@@ -54,6 +54,7 @@ export const metadata: Metadata = {
 import Script from "next/script";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import BannerExchange from "@/components/BannerExchange";
+import KakaoAdFit from "@/components/KakaoAdFit";
 import Footer from "@/components/Footer";
 import ServiceWorkerRegistration from "@/components/ServiceWorkerRegistration";
 
@@ -87,6 +88,7 @@ export default function RootLayout({
           <div className="flex-grow">
             {children}
           </div>
+          <KakaoAdFit />
           <BannerExchange />
           <Footer />
         </div>
