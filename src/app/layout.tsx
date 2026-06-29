@@ -86,6 +86,11 @@ export default function RootLayout({
           crossOrigin="anonymous"
           strategy="lazyOnload"
         />
+        {/* 애드핏 SDK: lazyOnload로 1회 로드 → 페이지 로드 후 모든 <ins> 요소를 한 번에 처리 */}
+        <Script
+          src="//t1.kakaocdn.net/kas/static/ba.min.js"
+          strategy="lazyOnload"
+        />
         {/* 콘텐츠 + PC 사이드바 래퍼 */}
         <div className="flex items-start gap-4 w-full justify-center">
           {/* 메인 콘텐츠 */}
