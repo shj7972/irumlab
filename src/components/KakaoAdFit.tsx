@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { injectAdFitScript } from "@/lib/adfit";
 
 export default function KakaoAdFit() {
     const [isMobile, setIsMobile] = useState<boolean | null>(null);
@@ -18,30 +17,34 @@ export default function KakaoAdFit() {
         if (isMobile === null) return;
         if (!adRef.current) return;
 
-        // Clear previous ad to prevent duplication on resize
+        // 이전 광고 제거
         adRef.current.innerHTML = "";
 
         const ins = document.createElement("ins");
         ins.className = "kakao_ad_area";
-        // ✅ display:none is required per AdFit official spec — the SDK changes it to visible when an ad loads
-        ins.style.display = "none";
+        ins.style.display = "none"; // AdFit 공식 스펙: SDK가 광고 로드 시 직접 변경
 
         if (isMobile) {
-            // Mobile 320x50
             ins.setAttribute("data-ad-unit", "DAN-lcWZfmL0690w78rB");
             ins.setAttribute("data-ad-width", "320");
             ins.setAttribute("data-ad-height", "50");
         } else {
-            // PC 728x90
             ins.setAttribute("data-ad-unit", "DAN-gjHydf0ik26ozOSr");
             ins.setAttribute("data-ad-width", "728");
             ins.setAttribute("data-ad-height", "90");
         }
 
-        adRef.current.appendChild(ins);
+        // ✅ 핵심: <ins>와 <script>를 항상 함께 추가해야 SDK가 새 광고 단위를 인식함
+        // <script>가 새로 실행될 때마다 DOM의 kakao_ad_area ins 요소를 스캔하므로
+        // document.head에 한 번만 주입하면 동적으로 추가된 <ins>를 처리하지 못함
+        const scr = document.createElement("script");
+        scr.async = true;
+        scr.type = "text/javascript";
+        scr.src = "//t1.kakaocdn.net/kas/static/ba.min.js";
+        scr.charset = "utf-8";
 
-        // Inject SDK script once globally
-        injectAdFitScript();
+        adRef.current.appendChild(ins);
+        adRef.current.appendChild(scr);
     }, [isMobile]);
 
     return (

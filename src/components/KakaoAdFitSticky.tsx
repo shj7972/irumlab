@@ -1,10 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { injectAdFitScript } from "@/lib/adfit";
 
 interface KakaoAdFitStickyProps {
-    /** 애드핏 모바일 광고 유닛 ID */
     adUnit: string;
     adWidth?: string;
     adHeight?: string;
@@ -38,16 +36,20 @@ export default function KakaoAdFitSticky({
 
         const ins = document.createElement("ins");
         ins.className = "kakao_ad_area";
-        // ✅ display:none is required per AdFit official spec — the SDK changes it to visible when an ad loads
-        ins.style.display = "none";
+        ins.style.display = "none"; // AdFit 공식 스펙
         ins.setAttribute("data-ad-unit", adUnit);
         ins.setAttribute("data-ad-width", adWidth);
         ins.setAttribute("data-ad-height", adHeight);
 
-        adRef.current.appendChild(ins);
+        // ✅ <ins>와 <script>를 함께 추가: SDK가 실행 시 이 <ins>를 바로 처리
+        const scr = document.createElement("script");
+        scr.async = true;
+        scr.type = "text/javascript";
+        scr.src = "//t1.kakaocdn.net/kas/static/ba.min.js";
+        scr.charset = "utf-8";
 
-        // Inject SDK script once globally
-        injectAdFitScript();
+        adRef.current.appendChild(ins);
+        adRef.current.appendChild(scr);
     }, [isMobile, adUnit, adWidth, adHeight]);
 
     // Only render on mobile
