@@ -55,6 +55,7 @@ import Script from "next/script";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import BannerExchange from "@/components/BannerExchange";
 import KakaoAdFit from "@/components/KakaoAdFit";
+import KakaoAdFitSticky from "@/components/KakaoAdFitSticky";
 import Footer from "@/components/Footer";
 import ServiceWorkerRegistration from "@/components/ServiceWorkerRegistration";
 
@@ -85,13 +86,15 @@ export default function RootLayout({
           strategy="lazyOnload"
         />
         <div className="w-full md:max-w-screen-lg bg-white min-h-screen md:min-h-[calc(100vh-80px)] shadow-2xl relative md:rounded-[2.5rem] overflow-hidden flex flex-col">
-          <div className="flex-grow">
+          <div className="flex-grow pb-[108px] md:pb-0">
             {children}
           </div>
           <KakaoAdFit />
           <BannerExchange />
           <Footer />
         </div>
+        {/* 모바일 하단 고정 광고 배너 (320x100) */}
+        <KakaoAdFitSticky adUnit="DAN-49Y2jYXPDMcFaJr7" adWidth="320" adHeight="100" />
       </body>
     </html>
   );
