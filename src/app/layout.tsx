@@ -56,6 +56,7 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 import BannerExchange from "@/components/BannerExchange";
 import KakaoAdFit from "@/components/KakaoAdFit";
 import KakaoAdFitSticky from "@/components/KakaoAdFitSticky";
+import KakaoAdFitSidebarPC from "@/components/KakaoAdFitSidebarPC";
 import Footer from "@/components/Footer";
 import ServiceWorkerRegistration from "@/components/ServiceWorkerRegistration";
 
@@ -75,7 +76,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       </head>
       <body
-        className={`${notoSansKr.className} ${notoSerifKr.variable} antialiased bg-gray-100 min-h-screen flex justify-center py-0 md:py-10`}
+        className={`${notoSansKr.className} ${notoSerifKr.variable} antialiased bg-gray-100 min-h-screen flex justify-center items-start py-0 md:py-10`}
       >
         <GoogleAnalytics gaId="G-8CL9TDVEHJ" />
         <ServiceWorkerRegistration />
@@ -85,13 +86,25 @@ export default function RootLayout({
           crossOrigin="anonymous"
           strategy="lazyOnload"
         />
-        <div className="w-full md:max-w-screen-lg bg-white min-h-screen md:min-h-[calc(100vh-80px)] shadow-2xl relative md:rounded-[2.5rem] overflow-hidden flex flex-col">
-          <div className="flex-grow pb-[108px] md:pb-0">
-            {children}
+        {/* 콘텐츠 + PC 사이드바 래퍼 */}
+        <div className="flex items-start gap-4 w-full justify-center">
+          {/* 메인 콘텐츠 */}
+          <div className="w-full md:max-w-screen-lg bg-white min-h-screen md:min-h-[calc(100vh-80px)] shadow-2xl relative md:rounded-[2.5rem] overflow-hidden flex flex-col shrink-0">
+            <div className="flex-grow pb-[108px] md:pb-0">
+              {children}
+            </div>
+            <KakaoAdFit />
+            <BannerExchange />
+            <Footer />
           </div>
-          <KakaoAdFit />
-          <BannerExchange />
-          <Footer />
+          {/* PC 전용 우측 사이드바 광고 (2xl: 1536px 이상에서만 표시) */}
+          <aside className="hidden 2xl:flex flex-col gap-4 shrink-0 w-[316px] sticky top-24 self-start">
+            <KakaoAdFitSidebarPC
+              adUnit="DAN-VO1F14uCGwl5bwdp"
+              adWidth="300"
+              adHeight="250"
+            />
+          </aside>
         </div>
         {/* 모바일 하단 고정 광고 배너 (320x100) */}
         <KakaoAdFitSticky adUnit="DAN-49Y2jYXPDMcFaJr7" adWidth="320" adHeight="100" />
