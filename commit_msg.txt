@@ -1,7 +1,0 @@
-feat: add real KakaoAdFit banner in premium unlock ad screen
-
-- Replace fake spinner with actual KakaoAdFit 320x100 ad banner
-- Add 5-second circular countdown timer (gold SVG ring)
-- Use useEffect + setInterval for countdown management
-- Trigger kakaoAdFit reload on dynamic ins element insertion
-- Remove unused Play icon import
