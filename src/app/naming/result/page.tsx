@@ -67,6 +67,7 @@ function ResultPageInner() {
                     saju={saju}
                     distribution={distribution}
                     recommendedElement={recommendedElement}
+                    lastName={lastName}
                 />
             </main>
         </div>

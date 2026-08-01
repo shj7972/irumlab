@@ -7,6 +7,7 @@ import Link from "next/link";
 import { generateAdvancedEnglishNames } from "@/lib/english-naming-advanced";
 import { RefreshCcw, Copy, Gamepad2, Instagram, Youtube, User, Star } from "lucide-react";
 import ShareButtons from "@/components/ShareButtons";
+import ShareImageCard from "@/components/ShareImageCard";
 
 const PLATFORM_ICONS: Record<string, React.ElementType> = {
     game: Gamepad2,
@@ -92,7 +93,22 @@ function EnglishResultPageInner() {
                     ))}
                 </div>
 
-                <div className="mt-10 flex flex-col items-center gap-4">
+                <div className="mt-10 flex flex-col items-center gap-5">
+                    {/* 이미지 카드 공유 */}
+                    {names.length > 0 && (
+                        <ShareImageCard
+                            data={{
+                                type: "english",
+                                name: names[0].name,
+                                meaning: names[0].meaning,
+                                story: names[0].story,
+                                platform: input.platform,
+                                tags: names[0].tags,
+                            }}
+                        />
+                    )}
+
+                    {/* 링크 공유 */}
                     <ShareButtons
                         title="AI 영어 닉네임 추천 - 이룸랩"
                         description="나만의 센스있는 영어 닉네임을 AI가 추천해 드려요!"

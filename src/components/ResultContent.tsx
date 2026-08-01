@@ -7,6 +7,7 @@ import { NamingResult } from "@/lib/naming";
 import { Saju, OhaengDistribution } from "@/lib/saju";
 import PremiumAnalysis from "./PremiumAnalysis";
 import ShareButtons from "./ShareButtons";
+import ShareImageCard from "./ShareImageCard";
 import { trackPremiumUnlockStart, trackPremiumUnlockComplete, trackNamingResultView } from "@/lib/analytics";
 
 interface ResultContentProps {
@@ -15,9 +16,10 @@ interface ResultContentProps {
     saju: Saju;
     distribution: OhaengDistribution;
     recommendedElement: string;
+    lastName?: string;
 }
 
-export default function ResultContent({ freeNames, lockedNames, saju, distribution, recommendedElement }: ResultContentProps) {
+export default function ResultContent({ freeNames, lockedNames, saju, distribution, recommendedElement, lastName = "김" }: ResultContentProps) {
     const [isUnlocked, setIsUnlocked] = useState(false);
     const [isAdPlaying, setIsAdPlaying] = useState(false);
     const [tracked, setTracked] = useState(false);
@@ -202,7 +204,23 @@ export default function ResultContent({ freeNames, lockedNames, saju, distributi
             )}
 
             {/* Share & Action */}
-            <div className="px-5 mt-10 mb-12 flex flex-col items-center gap-4">
+            <div className="px-5 mt-10 mb-12 flex flex-col items-center gap-5">
+                {/* 이미지 카드 공유 */}
+                {freeNames.length > 0 && (
+                    <ShareImageCard
+                        data={{
+                            type: "baby",
+                            lastName,
+                            name: freeNames[0].name.replace(lastName, ""),
+                            hanja: freeNames[0].hanja,
+                            meaning: freeNames[0].meaning,
+                            element: recommendedElement,
+                            tags: freeNames[0].tags,
+                        }}
+                    />
+                )}
+
+                {/* 링크 공유 */}
                 <ShareButtons
                     title="AI 사주 작명 결과 - 이룸랩"
                     description="사주명리학 기반 AI가 추천한 최고의 이름을 확인해 보세요!"
