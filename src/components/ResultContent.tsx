@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { Lock, RefreshCcw, CheckCircle, Play } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { Lock, RefreshCcw, CheckCircle } from "lucide-react";
 import Link from "next/link";
 import { NamingResult } from "@/lib/naming";
 import { Saju, OhaengDistribution } from "@/lib/saju";
@@ -22,7 +22,41 @@ interface ResultContentProps {
 export default function ResultContent({ freeNames, lockedNames, saju, distribution, recommendedElement, lastName = "김" }: ResultContentProps) {
     const [isUnlocked, setIsUnlocked] = useState(false);
     const [isAdPlaying, setIsAdPlaying] = useState(false);
+    const [countdown, setCountdown] = useState(5);
     const [tracked, setTracked] = useState(false);
+    const adInsRef = useRef<HTMLElement | null>(null);
+
+    // 광고 카운트다운 타이머
+    useEffect(() => {
+        if (!isAdPlaying) return;
+        setCountdown(5);
+
+        // KakaoAdFit 재실행 트리거 (페이지 내 동적 삽입된 ins 요소 처리)
+        const timer = setTimeout(() => {
+            try {
+                const win = window as Window & { kakaoAdFit?: { reload: () => void } };
+                if (win.kakaoAdFit) win.kakaoAdFit.reload();
+            } catch { /* ignore */ }
+        }, 100);
+
+        const interval = setInterval(() => {
+            setCountdown(prev => {
+                if (prev <= 1) {
+                    clearInterval(interval);
+                    setIsAdPlaying(false);
+                    setIsUnlocked(true);
+                    trackPremiumUnlockComplete();
+                    return 0;
+                }
+                return prev - 1;
+            });
+        }, 1000);
+
+        return () => {
+            clearInterval(interval);
+            clearTimeout(timer);
+        };
+    }, [isAdPlaying]);
 
     if (!tracked) {
         trackNamingResultView("baby");
@@ -32,13 +66,6 @@ export default function ResultContent({ freeNames, lockedNames, saju, distributi
     const handleUnlock = () => {
         trackPremiumUnlockStart();
         setIsAdPlaying(true);
-
-        // Simulate Ad Duration (3 seconds)
-        setTimeout(() => {
-            setIsAdPlaying(false);
-            setIsUnlocked(true);
-            trackPremiumUnlockComplete();
-        }, 3000);
     };
 
     return (
@@ -138,13 +165,55 @@ export default function ResultContent({ freeNames, lockedNames, saju, distributi
                         </div>
                     )}
 
-                    {/* Ad Playing Overlay */}
+                    {/* Ad Playing Overlay — 실제 KakaoAdFit 배너 광고 표시 */}
                     {isAdPlaying && (
-                        <div className="absolute inset-0 z-20 flex items-center justify-center p-4">
-                            <div className="bg-black text-white p-6 rounded-2xl text-center w-full h-full flex flex-col items-center justify-center backdrop-blur-lg bg-opacity-90">
-                                <div className="w-12 h-12 border-4 border-brand-gold border-t-transparent rounded-full animate-spin mb-4" />
-                                <p className="text-lg font-bold mb-2">광고 재생 중...</p>
-                                <p className="text-sm text-gray-400">잠시만 기다려주세요 (3초)</p>
+                        <div className="absolute inset-0 z-20 flex flex-col items-center justify-center p-4 bg-black/95 backdrop-blur-sm rounded-2xl">
+                            {/* 타이틀 */}
+                            <div className="text-center mb-4">
+                                <p className="text-white font-bold text-base mb-1">광고 시청 중</p>
+                                <p className="text-gray-400 text-xs">프리미엄 이름을 무료로 확인할 수 있어요</p>
+                            </div>
+
+                            {/* KakaoAdFit 배너 — 320×100 */}
+                            <div
+                                className="w-full flex justify-center items-center bg-gray-900 rounded-xl overflow-hidden"
+                                style={{ minHeight: 108 }}
+                                aria-label="광고"
+                            >
+                                <ins
+                                    ref={adInsRef as React.Ref<HTMLModElement>}
+                                    className="kakao_ad_area"
+                                    style={{ display: "none" }}
+                                    data-ad-unit="DAN-49Y2jYXPDMcFaJr7"
+                                    data-ad-width="320"
+                                    data-ad-height="100"
+                                />
+                            </div>
+
+                            {/* 광고주 표시 */}
+                            <p className="text-gray-600 text-[10px] mt-1 mb-4">광고</p>
+
+                            {/* 카운트다운 */}
+                            <div className="flex items-center gap-3">
+                                <div className="relative w-10 h-10">
+                                    <svg className="w-10 h-10 -rotate-90" viewBox="0 0 36 36">
+                                        <circle cx="18" cy="18" r="15" fill="none" stroke="#374151" strokeWidth="3" />
+                                        <circle
+                                            cx="18" cy="18" r="15"
+                                            fill="none"
+                                            stroke="#d4af37"
+                                            strokeWidth="3"
+                                            strokeDasharray={`${(countdown / 5) * 94.2} 94.2`}
+                                            strokeLinecap="round"
+                                        />
+                                    </svg>
+                                    <span className="absolute inset-0 flex items-center justify-center text-white font-bold text-sm">
+                                        {countdown}
+                                    </span>
+                                </div>
+                                <p className="text-gray-300 text-sm">
+                                    {countdown}초 후 자동 공개됩니다
+                                </p>
                             </div>
                         </div>
                     )}
