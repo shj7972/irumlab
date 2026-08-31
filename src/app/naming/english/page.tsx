@@ -278,6 +278,27 @@ export default function EnglishNamingPage() {
                             </div>
                             <ChevronRight size={16} className="text-gray-300 group-hover:text-pink-400 shrink-0 ml-2" />
                         </Link>
+                        <Link href="/blog/lol-nickname-ideas" className="flex items-center justify-between bg-white rounded-xl p-4 border border-gray-100 hover:border-indigo-200 transition-all group">
+                            <div>
+                                <span className="text-[10px] font-bold text-indigo-600 block mb-0.5">롤 닉네임</span>
+                                <span className="text-sm font-bold text-gray-800 group-hover:text-indigo-600 transition-colors">롤 영어 닉네임 추천 150선: 포지션별 LoL 아이디 모음</span>
+                            </div>
+                            <ChevronRight size={16} className="text-gray-300 group-hover:text-indigo-400 shrink-0 ml-2" />
+                        </Link>
+                        <Link href="/blog/valorant-nickname-ideas" className="flex items-center justify-between bg-white rounded-xl p-4 border border-gray-100 hover:border-red-200 transition-all group">
+                            <div>
+                                <span className="text-[10px] font-bold text-red-500 block mb-0.5">발로란트 닉네임</span>
+                                <span className="text-sm font-bold text-gray-800 group-hover:text-red-500 transition-colors">발로란트 닉네임 추천: 에이전트별 영어 아이디 150선</span>
+                            </div>
+                            <ChevronRight size={16} className="text-gray-300 group-hover:text-red-400 shrink-0 ml-2" />
+                        </Link>
+                        <Link href="/blog/pubg-nickname-ideas" className="flex items-center justify-between bg-white rounded-xl p-4 border border-gray-100 hover:border-amber-200 transition-all group">
+                            <div>
+                                <span className="text-[10px] font-bold text-amber-600 block mb-0.5">배그 닉네임</span>
+                                <span className="text-sm font-bold text-gray-800 group-hover:text-amber-600 transition-colors">배틀그라운드 닉네임 추천 150선: 쿨한 배그 영어 아이디</span>
+                            </div>
+                            <ChevronRight size={16} className="text-gray-300 group-hover:text-amber-400 shrink-0 ml-2" />
+                        </Link>
                     </div>
                 </section>
             </main>
