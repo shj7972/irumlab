@@ -13,6 +13,140 @@ export const BLOG_POSTS: BlogPost[] = [
 
 
     {
+        slug: "pubg-nickname-ideas",
+        title: "배틀그라운드 닉네임 추천 150선: 쿨한 배그 영어 아이디 모음",
+        description: "배틀그라운드(배그)에 어울리는 영어 닉네임 150개 총정리. 스타일별 군인 컨셉·쿨한 배그 아이디와 짓는 법까지 알려드립니다.",
+        date: "2026-08-31",
+        category: "게임 닉네임",
+        tags: ["배그닉네임", "배틀그라운드닉네임", "배그아이디추천", "게임닉네임", "배그영어이름"],
+        readingTime: 6,
+        content: `
+<h2>배틀그라운드 닉네임, 어떻게 지어야 할까?</h2>
+<p>배틀그라운드는 100명이 생존을 겨루는 밀리터리 배틀로얄입니다. 킬 피드와 랭킹 화면에 뜨는 <strong>배그 닉네임은 전적 검색까지 이어지는 퍼스널 브랜드</strong>입니다. 밀리터리 컨셉이 기본인 게임이라 군사적·전술한 느낌의 영어 닉네임이 특히 잘 어울립니다.</p>
+
+<h3>배그 닉네임 3대 스타일</h3>
+<ul>
+<li><strong>밀리터리/전술 스타일</strong> — SniperWolf, GhostRecon처럼 총기·전술 용어 활용</li>
+<li><strong>쿨하고 간결한 스타일</strong> — 짧은 단일 단어로 세련된 이미지 (Frost, Onyx, Rogue)</li>
+<li><strong>유쾌한 유머 스타일</strong> — 죽어도 웃기는 이름, 파밍하다 죽어도 웃음 한 판</li>
+</ul>
+
+<h3>밀리터리·전술 느낌 배그 닉네임 50선</h3>
+<ul>
+<li>SniperWolf, GhostRecon, SilentOps, NightRaider, SteelRain</li>
+<li>TacticalBear, AlphaSquad, BravoSix, DeltaForce, EchoTango</li>
+<li>HeadshotHero, ChickenDinner, WinnerWinner, LastZoneKing, FinalCircle</li>
+<li>ZoneRunner, BlueZone, RedZoneKing, AirdropHunter, LootGoblin</li>
+<li>AWMsniper, Kar98King, M416Master, AKMaddict, SCARLover</li>
+<li>PanDeflector, FryingPanDuel, Level3Helmet, VestCarrier, MedkitMaster</li>
+<li>EnergyDrink, PainKiller99, FirstAidKid, BandageBoy, BoostMaster</li>
+</ul>
+
+<h3>쿨하고 간결한 배그 영어 닉네임 50선</h3>
+<ul>
+<li>Frost, Onyx, Rogue, Viper, Saber</li>
+<li>Blizzard, Tempest, Cyclone, Avalanche, Inferno</li>
+<li>Shadow, Phantom, Specter, Wraith, Revenant</li>
+<li>Falcon, Hawk, Raven, Condor, Osprey</li>
+<li>Predator, Apex, Alpha, Vanguard, Renegade</li>
+<li>Outlaw, Drifter, Wanderer, Nomad, Maverick</li>
+<li>ColdSteel, IronSight, TrueSight, DeadEye, QuickScope</li>
+<li>NoScopeKing, ClutchGod, ClutchMaster, SoloSquad, DuoSlayer</li>
+<li>SquadLeader, TeamCarrier, MVPHunter, RankPusher, Conqueror</li>
+</ul>
+
+<h3>유머러스한 배그 닉네임 30선</h3>
+<ul>
+<li>FryingPanMaster, PanWarrior, PanDuelist, PanKing, PanSlayer</li>
+<li>PochinkiBoss, SchoolDropper, MilitaryBaseKing, GeorgopolThug, PrimorskHunter</li>
+<li>BridgeCamper, GrassCamper, BushWookie, TreeHugger, RockHider</li>
+<li>LootOnlyDie, NoLootRush, PunchMaster, FistFighter, KickBoxer</li>
+<li>RunFromZone, ZoneDodger, CircleRunner, BlueZoneSwimmer, RedZoneDancer</li>
+</ul>
+
+<h3>배그 닉네임 지을 때 팁</h3>
+<ul>
+<li><strong>길이 제한 확인</strong>: 배그 닉네임은 영어 기준 16자까지 가능하지만, 로딩 화면과 킬 피드에서 짧은 이름이 더 눈에 띕니다.</li>
+<li><strong>전적 검색을 생각하라</strong>: 친구가 전적을 찾아볼 때 부르기 쉬운 이름이 유리합니다.</li>
+<li><strong>밈과 신조어 활용</strong>: 치킨(승리), 파밍, 지존캠퍼 같은 배그 밈이 들어가면 공감을 얻습니다.</li>
+<li><strong>금지어 주의</strong>: 비속어·혐오 표현은 계정 제재 대상입니다.</li>
+</ul>
+
+<h3>AI로 나만의 배그 닉네임 만들기</h3>
+<p>150개를 보고도 마음에 드는 게 없다면 직접 만드는 게 정답입니다. 이룸랩 <a href="/naming/english/game">게임 영어 닉네임 제조기</a>에 키워드(예: 저격, 닭, 강철)를 넣으면 배그 감성의 영어 닉네임을 즉시 12개 뽑아드립니다. 무료, 로그인 없이 바로 사용 가능합니다.</p>
+
+<div style="background: #fef3c7; border-radius: 12px; padding: 16px; margin-top: 20px; text-align: center;">
+<p style="font-weight: bold; color: #92400e; margin: 0 0 8px;">🐔 치킨 먹을 배그 닉네임, AI로 뽑기</p>
+<a href="/naming/english/game" style="display: inline-block; background: #b45309; color: white; padding: 10px 24px; border-radius: 8px; font-weight: bold; text-decoration: none;">무료 배그 닉네임 생성 →</a>
+</div>
+`
+    },
+    {
+        slug: "cafe-name-ideas",
+        title: "카페 이름 짓기: 좋은 카페 상호 50선과 네이밍 공식",
+        description: "창업 카페 이름 짓는 법과 좋은 카페 상호 50선 모음. 지역명 조합, 감성 단어 조합, 도메인과 상표 확인까지 카페 네이밍의 모든 것을 정리했습니다.",
+        date: "2026-08-31",
+        category: "브랜드 네이밍",
+        tags: ["카페이름", "카페상호추천", "창업네이밍", "카페창업", "상호짓기"],
+        readingTime: 7,
+        content: `
+<h2>카페 창업, 이름이 절반이다</h2>
+<p>카페는 상호가 곧 첫 번째 마케팅입니다. 길에서 간판을 3초 본 사람이 기억하고, 인스타그램 태그를 붙이고, 다시 찾아오는 힘이 상호에서 나옵니다. 좋은 카페 이름은 <strong>발음 쉽고, 기억에 남고, SNS 태그가 자연스러운 이름</strong>입니다.</p>
+
+<h3>카페 이름 짓는 4대 공식</h3>
+<ol>
+<li><strong>[지역명] + [감성 단어]</strong> — 성수연가, 연희다방처럼 동네 브랜드화</li>
+<li><strong>[재료/음료] + [분위기 단어]</strong> — 원두와 나무, 콩과 우유 같은 직감적 조합</li>
+<li><strong>조어/신조어</strong> — 음성학적으로 부드러운 자모 조합으로 독창적 브랜드(프리미엄 전략)</li>
+<li><strong>외국어 차용</strong> — 프랑스어·이탈리아어 감성 단어로 프리미엄 분위기 연출</li>
+</ol>
+
+<h3>지역+감성 조합 카페 이름 예시 20선</h3>
+<ul>
+<li>연희다방, 성수연가, 망원숲, 한남정원, 서촌담</li>
+<li>부산바다식당 카페, 해운대달카페, 광안리별, 송도구름, 영도노을</li>
+<li>제주감귤밭, 애월해변, 좌천바람, 표선하늘, 성산일출</li>
+</ul>
+
+<h3>감성 단어 조합 카페 이름 30선</h3>
+<ul>
+<li>구름우유, 별빛콩, 달빛내림, 안개사이, 이슬머무는</li>
+<li>숲속레터, 바람기억, 파도가격, 해안선, 밀물표기</li>
+<li>오늘의향, 아침창가, 저물녘, 노을지기, 새벽다방</li>
+<li>책상가장자리, 창가자리, 세번째컵, 여섯시반, 일곱층향</li>
+<li>계절의끝, 초여름, 늦여름밤, 초겨울편지, 온겨울노트</li>
+</ul>
+
+<h3>영문·혼합 카페 이름 25선</h3>
+<ul>
+<li>Cafe Onhwa, Bean &amp; Bloom, Roast Atelier, Daily Grind, Cup &amp; Crumb</li>
+<li>Morning Fog, Slow Pour, Third Space, Quiet Hours, Velvet Bean</li>
+<li>Nine O'Clock, 6AM Roasters, Half Moon Coffee, Paper Cup Project, Cuppa Club</li>
+<li>Maison du Cafe, Creme de Bean, La Petite Tasse, Bello Caffe, Amor Aroma</li>
+</ul>
+
+<h3>카페 상호 결정 전 체크리스트 5가지</h3>
+<ol>
+<li><strong>중복 상호 검색</strong> — 네이버 지도·인스타그램에서 같은 이름 카페가 있는지 먼저 확인</li>
+<li><strong>도메인·인스타 핸들</strong> — 홈페이지(.kr/.com)와 @계정이 비어 있는지 체크</li>
+<li><strong>상표권 검색</strong> — KIPRIS(kipris.or.kr)에서 유사 상표 등록 여부 확인</li>
+<li><strong>간판 시뮬레이션</strong> — 한글 4~8자면 간판 가독성이 좋습니다. 너무 긴 이름은 메뉴판·컵 인쇄 비용도 올립니다</li>
+<li><strong>부정적 연상 테스트</strong> — 이름을 말했을 때 웃음이 나오는 조합인지, 어색한 발음은 아닌지 주변에 물어보기</li>
+</ol>
+
+<h3>AI로 카페 이름 뽑아보기</h3>
+<p>수십 개 후보가 필요하면 AI가 편합니다. 이룸랩 <a href="/naming/brand">AI 브랜드 네이밍</a>에서 업종 '카페', 키워드(예: 감성, 바다, 힐링), 타겟층만 입력하면 지역·분위기 기반 상호 후보를 즉시 생성해 드립니다. 상호 결정 전 도메인·상표 체크팁도 함께 제공합니다.</p>
+
+<div style="background: #fef3c7; border-radius: 12px; padding: 16px; margin-top: 20px; text-align: center;">
+<p style="font-weight: bold; color: #92400e; margin: 0 0 8px;">☕ 동네 1등 카페, 이름부터 잡기</p>
+<a href="/naming/brand" style="display: inline-block; background: #92400e; color: white; padding: 10px 24px; border-radius: 8px; font-weight: bold; text-decoration: none;">무료 카페 상호 생성 →</a>
+</div>
+`
+    },
+
+
+
+    {
         slug: "lol-nickname-ideas",
         title: "롤 영어 닉네임 추천 150선: 강렬한 LoL 아이디 모음",
         description: "리그오브레전드(롤)용 영어 닉네임 150개 총정리. 포지션별·스타일별 강렬한 롤 영어 아이디와 짓는 법을 알려드립니다.",
