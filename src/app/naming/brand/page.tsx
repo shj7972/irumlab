@@ -225,6 +225,28 @@ export default function BrandNamingPage() {
                 </div>
             </main>
 
+
+                {/* SEO 콘텐츠 */}
+                <section className="mt-10 mb-7 bg-gray-50 rounded-2xl p-5 text-sm text-gray-600 leading-relaxed space-y-3">
+                    <h2 className="font-bold text-gray-800">브랜드 이름 짓기 완벽 가이드</h2>
+                    <p>창업 초기 브랜드 이름은 곧 마케팅 자산입니다. 좋은 브랜드 이름은 발음이 쉽고(전화로 말해도 철자를 묻지 않을 정도), 2~4음절로 짧으며, 도메인과 상표까지 확보 가능해야 합니다. 반대로 이름이 길거나 이미 선점된 이름은 운영 단계에서 광고비 손실로 돌아옵니다.</p>
+
+                    <h2 className="font-bold text-gray-800">업종별 브랜드 네이밍 공식</h2>
+                    <ul className="space-y-1 list-disc list-inside text-xs">
+                        <li><strong>IT/SaaS</strong>: 단어 합성·음성학 기반 조어 (예: Notion, Vercel, Figma)</li>
+                        <li><strong>카페/베이커리</strong>: 지역명 + 재료/분위기 조합으로 장소 브랜드화</li>
+                        <li><strong>패션/뷰티</strong>: 창작 조어 + 프렌치풍 어미(-é, -elle)로 프리미엄 감성</li>
+                        <li><strong>식품/건기식</strong>: 원료·성분 힌트 + 신뢰 단어 조합</li>
+                    </ul>
+
+                    <h2 className="font-bold text-gray-800">도메인 확보 순서</h2>
+                    <p className="text-xs">이름 후보 생성 → 도메인 검색(.com → .kr) → SNS 핸들 확인 → KIPRIS 상표 검색. 도메인이 점유 중이면 하이픈보다는 Get/Go/Try 접두나 단어 변형이 안전합니다. <a href="/blog/brand-name-generator-guide" className="text-indigo-600 underline">브랜드 네이밍 가이드 전체 보기 →</a></p>
+
+                    <h2 className="font-bold text-gray-800">자주 묻는 질문</h2>
+                    <p className="text-xs"><strong>Q. AI 브랜드 네이밍은 정확한가요?</strong><br />AI는 업종 데이터와 네이밍 공식을 조합해 몇십 가지 후보를 즉시 만들어 줍니다. 최종 선택 전 도메인·상표 검증만 사람이 하면 됩니다.</p>
+                    <p className="text-xs"><strong>Q. 영어 브랜드 이름이 좋나요, 한글이 좋나요?</strong><br />타겟과 유통 채널에 따라 다릅니다. 온라인 중심이면 영어·혼합이 유리하고, 지역 상권 기반이면 한글이 기억에 남는 경우가 많습니다.</p>
+                </section>
+
             {/* Bottom CTA */}
             <div className="fixed bottom-0 left-0 right-0 p-5 bg-white/80 backdrop-blur-md border-t border-gray-100 max-w-[480px] mx-auto z-10">
                 <button

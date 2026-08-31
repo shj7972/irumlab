@@ -10,6 +10,221 @@ export interface BlogPost {
 }
 
 export const BLOG_POSTS: BlogPost[] = [
+
+
+    {
+        slug: "lol-nickname-ideas",
+        title: "롤 영어 닉네임 추천 150선: 강렬한 LoL 아이디 모음",
+        description: "리그오브레전드(롤)용 영어 닉네임 150개 총정리. 포지션별·스타일별 강렬한 롤 영어 아이디와 짓는 법을 알려드립니다.",
+        date: "2026-08-31",
+        category: "게임 닉네임",
+        tags: ["롤닉네임", "롤영어닉네임", "롤아이디추천", "리그오브레전드", "게임닉네임"],
+        readingTime: 6,
+        content: `
+<h2>롤(리그 오브 레전드) 닉네임, 왜 영어로 해야 할까?</h2>
+<p>롤에서 닉네임은 단순한 아이디가 아니라 <strong>게임 내 퍼스널 브랜드</strong>입니다. 챔피언을 집는 순간부터 킬을 내는 순간까지, 강렬한 롤 영어 닉네임은 상대방에게 심리적 압박을 주고 팀원들에게 신뢰를 줍니다. 최근에는 한국어 닉네임보다 발음이 쉽고 국제전에서도 통하는 영어 닉네임을 선호하는 플레이어가 늘고 있습니다.</p>
+
+<h3>롤 닉네임 짓는 4가지 공식</h3>
+<p>좋은 롤 영어 닉네임에는 공식이 있습니다:</p>
+<ul>
+<li><strong>[어두운 형용사] + [동물/자연 명사]</strong>: DarkWolf, SilentViper, FrozenRaven</li>
+<li><strong>[신화/전설 인물]</strong>: Odin, Fenrir, Valkyrie, Nemesis, Hades</li>
+<li><strong>[단일 강한 단어]</strong>: Viper, Phantom, Eclipse, Reaper, Wraith</li>
+<li><strong>[컨셉 조합]</strong>: NightReaper, VoidWalker, StormRider, ShadowBlade</li>
+</ul>
+
+<h3>포지션별 롤 영어 닉네임 추천</h3>
+<p><strong>탑(Top)</strong> — 앞라인에서 버티고 싸우는 느낌: Titanforge, Ironclad, MountainKing, Fortress, Bulwark</p>
+<p><strong>정글(Jungle)</strong> — 사냥과 은밀함: Stalker, Prowler, NightHunter, Ambusher, Wildclaw</p>
+<p><strong>미드(Mid)</strong> — 화력과 존재감: Inferno, Pyroclasm, ArcaneStorm, Spellbinder, Voidcaller</p>
+<p><strong>원딜(ADC)</strong> — 정밀한 저격: SnipeQueen, Marksman, Bullseye, SilverBolt, Deadeye</p>
+<p><strong>서포터(Support)</strong> — 팀을 지키는 존재: GuardianAngel, Lifeline, Aegis, Sanctum, ShieldMaiden</p>
+
+<h3>강렬한 롤 영어 닉네임 50선</h3>
+<ul>
+<li>DarkWolf, NightReaper, VoidWalker, IronGhost, StormRider</li>
+<li>ShadowViper, SilentBlade, FrozenThrone, CrimsonFang, AbyssWalker</li>
+<li>PhantomStrike, GrimHarvest, DreadKnight, ChaosBringer, SoulReaper</li>
+<li>ThunderFist, FrostViper, Blackout, Nightmare, DoomSayer</li>
+<li>Wraithblade, Grimlock, IronMaw, VenomStrike, DeathMark</li>
+<li>HexHunter, BloodMoon, DarkPulse, RageQuitter, KillSwitch</li>
+<li>LoneWolf, SharpShooter, GhostProtocol, SilentStorm, DarkAegis</li>
+<li>VoidReaper, Cinderfall, Frostbite, Nightblade, Shadowfax</li>
+<li>EclipseLord, VoidHunter, DarkSentinel, Grimfang, WardenOfDusk</li>
+<li>Stormcaller, AshenOne, RuinBlade, VexWarden, Nighthold</li>
+</ul>
+
+<h3>귀엽고 유쾌한 롤 닉네임 (서브 계정용) 40선</h3>
+<ul>
+<li>NoodleKnight, DuckDynasty, BaoZiPuff, MochiSlayer, TofuTank</li>
+<li>KimchiRush, PotatoPower, BananaBlade, CookieClash, WaffleWarrior</li>
+<li>SneezyPanda, GigglingGrape, JumpyJelly, SleepySnail, WobblyWorm</li>
+<li>FluffyDoom, ChunkyMonkey, GrumpyCat, SillyGoose, LazyBear</li>
+<li>PingPongKing, RamenRaider, SushiSlayer, TacoTerror, BaguetteBoss</li>
+<li>SnowPea, DumplingDiva, BubbleTeaBoss, SpicyCabbage, MangoMuncher</li>
+<li>PandaHugger, ChickenChaser, MelonMasher, CornCobKing, PancakePunch</li>
+</ul>
+
+<h3>신화·전설 컨셉 롤 닉네임 30선</h3>
+<ul>
+<li>Odin, Thor99, LokiTrick, FenrirFang, ValkyrieStorm</li>
+<li>AresWarbringer, HadesCrown, ZeusBolt, PoseidonWave, ApolloSun</li>
+<li>KrakenWake, HydraVenom, ChimeraFlame, SphinxRiddle, PhoenixRise</li>
+<li>GrimReaper, DeathAngel, HellFire, AngelOfDeath, DemonicRush</li>
+<li>NemesisX, KarmaPolice, FateWeaver, DestinyEdge, ChronosBreak</li>
+</ul>
+
+<h3>롤 닉네임 지을 때 주의사항</h3>
+<ul>
+<li><strong>금지어 피하기</strong>: 욕설, 혐오 표현, 유명인 실명은 계정 제재 대상입니다.</li>
+<li><strong>너무 긴 이름 피하기</strong>: 채팅에서 짧고 부르기 쉬운 이름이 기억에 남습니다.</li>
+<li><strong>특수문자 남용 금지</strong>: xX_Name_Xx 같은 2010년대 스타일은 오히려 촌스러워 보입니다.</li>
+<li><strong>챔피언 컨셉 연결</strong>: 즐겨 쓰는 챔피언과 어울리는 닉네임이면 몰입감이 배가됩니다.</li>
+</ul>
+
+<h3>AI로 나만의 롤 닉네임 만들기</h3>
+<p>위 목록에서 마음에 드는 이름이 없다면, 직접 만드는 게 답입니다. 이룸랩의 <a href="/naming/english/game">게임 영어 닉네임 제조기</a>는 키워드 하나만 넣어도 롤 게임성에 맞는 강렬한 닉네임을 즉시 12개 생성해 드립니다. 완전 무료이고 로그인도 필요 없습니다.</p>
+
+<div style="background: #eef2ff; border-radius: 12px; padding: 16px; margin-top: 20px; text-align: center;">
+<p style="font-weight: bold; color: #4338ca; margin: 0 0 8px;">🎮 라이엇 계정에 바로 쓸 나만의 롤 닉네임</p>
+<a href="/naming/english/game" style="display: inline-block; background: #4338ca; color: white; padding: 10px 24px; border-radius: 8px; font-weight: bold; text-decoration: none;">AI 롤 닉네임 생성하기 →</a>
+</div>
+`
+    },
+    {
+        slug: "valorant-nickname-ideas",
+        title: "발로란트 닉네임 추천: 쿨하고 강렬한 영어 아이디 150선",
+        description: "발로란트에 어울리는 영어 닉네임 150개 총정리. 요원별·스타일별 쿨한 발로란트 닉네임과 작명 팁을 모았습니다.",
+        date: "2026-08-31",
+        category: "게임 닉네임",
+        tags: ["발로란트닉네임", "발로닉네임추천", "발로란트영어이름", "FPS닉네임", "게임아이디"],
+        readingTime: 6,
+        content: `
+<h2>발로란트 닉네임의 특별함</h2>
+<p>발로란트는 에이전트별 개성이 강한 전략 FPS입니다. 스킬을 쓰고 투자하는 시간이 많은 만큼, <strong>팀 배너와 킬 로그에 자주 뜨는 닉네임</strong>은 그만큼 눈에 띕니다. 짧고 발음이 쉬우면서 강렬한 영어 닉네임이 발로란트에서 가장 인기입니다.</p>
+
+<h3>발로란트 닉네임 공식 3가지</h3>
+<ul>
+<li><strong>짧은 단일 단어</strong>: Ghost, Cipher, Flash, Zero, Nova</li>
+<li><strong>[전술 용어] + [동물/사물]</strong>: ReconWolf, BlitzFang, EchoFox</li>
+<li><strong>[숫자 조합]</strong>: Xx_Blade_xX보다 Blade7 같은 심플한 숫자 조합이 세련됨</li>
+</ul>
+
+<h3>쿨하고 강렬한 발로란트 닉네임 50선</h3>
+<ul>
+<li>Cipher, Nova, Pulse, Ember, Frost</li>
+<li>Blitz, Onyx, Vex, Sable, Drift</li>
+<li>ReconWolf, EchoFox, SaberSquad, NightOps, StormUnit</li>
+<li>ZeroHour, GhostUnit, DarkMatter, BlackIce, SilentScope</li>
+<li>QuickDraw, SharpShooter, HeadHunter, Crosshair, Reflex</li>
+<li>AceClutch, FragMaster, EntryFrag, PostPlant, SpikePlanter</li>
+<li>ViperVenom, SageBloom, PhoenixRise, JettDash, ReynaReign</li>
+<li>BreachWall, SovaArrow, CypherCam, KilljoyTurret, OmenVeil</li>
+<li>Flashbang, SmokeScreen, SlowOrb, ReconBolt, TrapWire</li>
+<li>RadiantEdge, Ascendant, ImmortalMind, DiamondCut, PlatinumGrind</li>
+</ul>
+
+<h3>요원 컨셉 닉네임 (에이전트 팬 투)</h3>
+<p>주로 쓰는 에이전트가 있다면 그 컨셉을 살리는 것도 좋은 방법입니다:</p>
+<ul>
+<li><strong>제트(Jett) 팬</strong>: WindBlade, DashQueen, Updraft, Tailwind, CloudRunner</li>
+<li><strong>레이나(Reyna) 팬</strong>: SoulHarvest, Devour, Dismiss, EyeOfReyna, VampireQueen</li>
+<li><strong>소바(Sova) 팬</strong>: HunterBolt, OwlEye, ReconDrone, ShockDart, TrackerArrow</li>
+<li><strong>세이지(Sage) 팬</strong>: HealingWall, SnowLotus, ReviveMaster, GuardianSage, Resurrect</li>
+<li><strong>바이퍼(Viper) 팬</strong>: ToxicScreen, PoisonCloud, AcidRain, VenomousGreen, PitViper</li>
+</ul>
+
+<h3>한국형 감성 발로란트 닉네임 25선</h3>
+<p>영어 닉네임에 한국어 감성을 더한 조합입니다:</p>
+<ul>
+<li>HanRiver, SeoulStorm, KimchiSniper, HwarangBlade, TaekwonKick</li>
+<li>MoonlightSword, HanokStyle, BingsuBoss, KimbapKnife, TaegeukMark</li>
+<li>GangnamStyle99, NamsanTower, HangangWolf, SeorakClaw, HallaPeak</li>
+</ul>
+
+<h3>발로란트 닉네임 짤 때 피해야 할 것</h3>
+<ul>
+<li><strong>챔피언(에이전트) 실명 그대로</strong>: Jett, Sage 같은 이름은 이미 많이 점유됨 + 개성 없음</li>
+<li><strong>속어·비속어</strong>: 신고 대상이 될 수 있습니다</li>
+<li><strong>숫자로만 구성</strong>: 기억하기 어렵고 스팸 계정처럼 보입니다</li>
+<li><strong>너무 유명 스트리머 닉네임 모방</strong>: 팬이어도 동일 닉네임은 피하세요</li>
+</ul>
+
+<h3>AI로 나만의 발로란트 닉네임 만들기</h3>
+<p>150개를 다 보고도 마음에 드는 게 없다면, 직접 만드는 게 최고입니다. 이룸랩 <a href="/naming/english/game">게임 영어 닉네임 제조기</a>에 좋아하는 키워드(예: 불꽃, 어둠, 눈)만 넣으면 발로란트 스타일의 쿨한 영어 닉네임을 즉시 생성합니다. 무료이며 회원가입이 필요 없습니다.</p>
+
+<div style="background: #fef2f2; border-radius: 12px; padding: 16px; margin-top: 20px; text-align: center;">
+<p style="font-weight: bold; color: #b91c1c; margin: 0 0 8px;">🔫 라디언트에 어울리는 나만의 닉네임</p>
+<a href="/naming/english/game" style="display: inline-block; background: #b91c1c; color: white; padding: 10px 24px; border-radius: 8px; font-weight: bold; text-decoration: none;">AI 발로란트 닉네임 생성 →</a>
+</div>
+`
+    },
+    {
+        slug: "brand-name-generator-guide",
+        title: "브랜드 이름 짓는 법: 도메인·상표까지 고려한 AI 브랜드 네이밍 가이드",
+        description: "창업 브랜드 이름을 지을 때 도메인 확보, 상표 검색, 업종별 네이밍 공식까지. AI 브랜드 네이밍 서비스 활용법을 상세 설명합니다.",
+        date: "2026-08-31",
+        category: "브랜드 네이밍",
+        tags: ["브랜드네이밍", "상호추천", "창업이름", "도메인추천", "브랜드이름짓기"],
+        readingTime: 8,
+        content: `
+<h2>창업 성공률을 좌우하는 브랜드 네이밍</h2>
+<p>스타트업과 소상공인 창업에서 브랜드 이름은 <strong>첫 마케팅 자산</strong>입니다. 좋은 브랜드 이름은 발음이 쉽고, 기억에 남고, 도메인까지 확보 가능해야 합니다. 반대로 이름이 나쁘면 광고비를 아무리 써도 브랜드 인지도가 쌓이지 않습니다.</p>
+
+<h3>좋은 브랜드 이름의 5가지 조건</h3>
+<ol>
+<li><strong>발음이 쉬워야 합니다</strong> — 전화로 말했을 때 철자를 물어보지 않을 정도</li>
+<li><strong>짧아야 합니다</strong> — 2~4음절, 영문 소문자 기준 6~12자</li>
+<li><strong>업종 암시 또는 스토리</strong> — 어느 정도 힌트를 주되 직설적이지 않게</li>
+<li><strong>도메인 확보 가능</strong> — .com 또는 .kr에서 유사 이름 존재 여부 확인</li>
+<li><strong>상표권 문제 없음</strong> — 특허정보검색서비스(KIPRIS)에서 선행 상표 확인 필수</li>
+</ol>
+
+<h3>업종별 브랜드 네이밍 공식</h3>
+<p><strong>IT/SaaS</strong> — 단어 합성이나 음의 축약: Notion(의미 단어), Vercel(음성학), Figma(피그마처럼 부드러운 자음). 자사 서비스가 기술적임을 암시하는 어원이 유리합니다.</p>
+<p><strong>카페/베이커리</strong> — 장소감 + 감성: 지역명(성수, 연희) + 재료/분위기 조합. "OO원조" 식의 지역 브랜드화에 성공한 사례가 많습니다.</p>
+<p><strong>패션/뷰티</strong> — 의인화 감성 단어 또는 창작 조어: 프렌치풍 어미(-é, -elle) 활용이 프리미엄 느낌을 줍니다.</p>
+<p><strong>식품/건강기능식품</strong> — 성분 또는 효능 힌트 + 신뢰감 단어: 원료를 이름에 노출시키면 신뢰도가 올라가고 검색 유입에도 유리합니다.</p>
+
+<h3>도메인 확보 전략</h3>
+<p>원하는 브랜드 이름이 결정되면 <strong>도메인이 살아있는지부터 확인</strong>하세요. 순서는 이렇습니다:</p>
+<ol>
+<li>이름 후보 10개 생성 — 이룸랩 <a href="/naming/brand">AI 브랜드 네이밍</a>으로 업종과 키워드 기반 추천</li>
+<li>도메인 검색 — .com, .co.kr, .kr 순으로 확인 (대개 .com 선점이 중요)</li>
+<li>도메인이 점유 중이면 — 이름 뒤에 Get/Go/Try 붙이기, 또는 하이픈보다 단어 변형 권장</li>
+<li>SNS 계정 아이디 확인 — 인스타그램·유튜브 핸들이 비어 있는지도 체크</li>
+<li>상표 검색 — KIPRIS에서 유사 상표가 등록돼 있는지 반드시 확인</li>
+</ol>
+
+<h3>AI 브랜드 네이밍 활용법</h3>
+<p>수작업으로 브랜드 이름을 짓는 건 시간이 많이 걸립니다. AI 도구를 사용하면 이런 과정이 3분으로 단축됩니다:</p>
+<ol>
+<li>업종 선택 (IT, 카페, 패션, 음식, 뷰티, 교육 등)</li>
+<li>핵심 키워드 입력 (예: 커피, 힐링, 바다)</li>
+<li>타겟 고객층 선택 (10대, 20~30대, 40대 등)</li>
+<li>언어 선호(한글/영어/혼합)와 분위기(모던/친근/프리미엄) 지정</li>
+<li>AI가 도메인 및 상표 검증 팁까지 포함해 후보 이름 생성</li>
+</ol>
+
+<h3>브랜드 이름 후보 평가 체크리스트</h3>
+<p>AI가 추천한 이름을 그대로 쓰기 전에 이 체크리스트를 거치세요:</p>
+<ul>
+<li>가족·친구 5명에게 말해보고 즉시 철자를 맞히는지 테스트</li>
+<li>검색했을 때 악성 사이트나 부정적 의미가 없는지 확인 (가능하면 구글 검색 + 네이버 검색 둘 다)</li>
+<li>유사 업종에서 이미 쓰는 이름이 아닌지 확인</li>
+<li>5년 뒤 사업 확장 방향을 고려했을 때 여전히 어울리는지 (예: '강남 레스토랑' 같은 지역 종속 이름은 확장 시 제약)</li>
+</ul>
+
+<h3>AI로 시작하는 브랜드 네이밍</h3>
+<p>이룸랩 <a href="/naming/brand">AI 브랜드 네이밍</a>은 업종, 키워드, 타겟, 언어·분위기 옵션을 입력하면 도메인·상표 검증 팁과 함께 브랜드 이름 후보를 즉시 생성해 드립니다. 창업 준비 중이라면 무료로 몇십 개 이름을 뽑아보는 것부터 시작해 보세요.</p>
+
+<div style="background: #eef2ff; border-radius: 12px; padding: 16px; margin-top: 20px; text-align: center;">
+<p style="font-weight: bold; color: #4338ca; margin: 0 0 8px;">🚀 창업할 브랜드 이름, AI로 3분 만에 짓기</p>
+<a href="/naming/brand" style="display: inline-block; background: #4338ca; color: white; padding: 10px 24px; border-radius: 8px; font-weight: bold; text-decoration: none;">무료 브랜드 네이밍 →</a>
+</div>
+`
+    },
+
     {
         slug: "2026-baby-name-trends",
         title: "2026년 인기 아기 이름 트렌드 TOP 10",
