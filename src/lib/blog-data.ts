@@ -1103,6 +1103,62 @@ export const BLOG_POSTS: BlogPost[] = [
 </div>
 `
     },
+    {
+        slug: "company-name-ideas",
+        title: "회사 이름 짓기: 기억되는 사명 50선과 네이밍 공식",
+        description: "창업 회사 이름 짓는 법과 좋은 사명 50선 모음. 업종별 스타일, 네이밍 공식, 사업자등록과 도메인 확인까지 정리했습니다.",
+        date: "2026-09-08",
+        category: "브랜드 네이밍",
+        tags: ["회사이름", "사명추천", "창업네이밍", "회사명짓기", "브랜드네이밍"],
+        readingTime: 7,
+        content: `
+<h2>회사 이름, 왜 중요한가</h2>
+<p>회사 이름은 첫 투자보다 첫 인상입니다. 고객이 처음 듣는 3초 안에 <strong>업종, 신뢰도, 기억점</strong>이 결정됩니다. 좋은 사명은 발음 쉽고, 검색되고, 도메인을 확보할 수 있는 이름입니다.</p>
+
+<h3>회사 이름 4대 공식</h3>
+<ol>
+<li><strong>[업종] + [가치 단어]</strong> — 스마트 물류, 청년 주택처럼 바로 이해되는 조합</li>
+<li><strong>조어(신조어)</strong> — 발음 좋은 자모 조합으로 독창적 브랜드 (프리미엄 전략)</li>
+<li><strong>[창업자 이름/닉네임] + [접미사]</strong> — 개인 브랜드 기반 사업</li>
+<li><strong>[지역명] + [품목]</strong> — 지역 기반 신뢰 형성 (전통시장·동네 상권에 유리)</li>
+</ol>
+
+<h3>업종별 추천 사명 50선</h3>
+<ul>
+<li><strong>IT/소프트웨어</strong>: 넥스트웨이브, 코드바다, 스마트루트, 클라우드나침반, 데이터 다방</li>
+<li><strong>카페/외식</strong>: 모닝브루, 곳간키친, 온도 셰프, 소금과 후추, 이웃식탁</li>
+<li><strong>콘텐츠/미디어</strong>: 스토리팩토리, 시선연구소, 화면 너머, 말말말 스튜디오, 프레임하우스</li>
+<li><strong>교육/아카데미</strong>: 미래공부방, 첫걸음 아카데미, 생각채우기, 질문학교, 배움창고</li>
+<li><strong>뷰티/패션</strong>: 피부정원, 옷고미, 톤앤톤, 미러미러, 조용한 옷장</li>
+<li><strong>커머스/유통</strong>: 바구니, 선물상자, 도착했어요, 매일의 장보기, 채워주는 가게</li>
+<li><strong>컨설팅/서비스</strong>: 길잡이 컨설팅, 숫자로 말하는, 정리된 하루, 해결사 모임, 흐름의 회사</li>
+</ul>
+
+<h3>사명 짓는 체크리스트</h3>
+<ul>
+<li><strong>사업자등록명 vs 브랜드명 분리 허용</strong>: 등기는 정식 사명, 마케팅은 브랜드명으로 나누면 유연해집니다.</li>
+<li><strong>발음 테스트</strong>: 전화로 말했을 때 상대방이 바로 철자를 맞히는지 확인하세요.</li>
+<li><strong>도메인 확보</strong>: .com/.co.kr/.kr 우선 확인. 사명과 도메인이 일치하면 검색 신뢰도가 올라갑니다.</li>
+<li><strong>상표 검색</strong>: 특허정보검색서비스(KIPRIS)에서 유사 상표 확인 후 결정하세요.</li>
+<li><strong>확장성</strong>: 초기 품목을 한정하는 이름(예: "OO커피")은 사업 확장 시 발목을 잡습니다.</li>
+</ul>
+
+<h3>사명 관련 자주 묻는 질문</h3>
+<p><strong>Q: 개인사업자도 사명을 마음대로 지을 수 있나요?</strong><br />A: 가능합니다. 다만 이미 등록된 동일 업종 동일 상호는 피하는 게 안전하며, 상호 사용 제한 규정(부동산중개업 등 일부 업종)은 확인이 필요합니다.</p>
+
+<p><strong>Q: 사명에 영어를 섞어도 되나요?</strong><br />A: 가능합니다. 다만 사업자등록증에는 한글 표기가 원칙인 경우가 많으니 등기용 이름과 마케팅용 이름을 구분하는 게 좋습니다.</p>
+
+<p><strong>Q: 이름 바꾸고 싶으면 어떻게 하나요?</strong><br />A: 개인사업자는 폐업 후 재개업이 원칙이고, 법인은 정관 변경 절차로 사명을 변경할 수 있습니다. 초기에 신중하게 정하는 게 좋습니다.</p>
+
+<h3>AI로 사명 찾기</h3>
+<p>50개를 봐도 마음에 드는 게 없다면 직접 만드는 게 정답입니다. 이룸랩 <a href="/naming/brand">브랜드 이름 제조기</a>에 키워드(예: 신뢰, 속도, 정직)를 넣으면 사명 감성의 이름을 즉시 뽑아드립니다. 무료, 로그인 없이 바로 사용 가능합니다.</p>
+
+<div style="background: #e0f2fe; border-radius: 12px; padding: 16px; margin-top: 20px; text-align: center;">
+<p style="font-weight: bold; color: #0c4a6e; margin: 0 0 8px;">🏢 회사 이름 고민 끝, AI로 뽑기</p>
+<a href="/naming/brand" style="display: inline-block; background: #0369a1; color: white; padding: 10px 24px; border-radius: 8px; font-weight: bold; text-decoration: none;">무료 사명 생성 →</a>
+</div>
+`
+    },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
