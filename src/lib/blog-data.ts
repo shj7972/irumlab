@@ -984,6 +984,125 @@ export const BLOG_POSTS: BlogPost[] = [
 </div>
 `
     },
+    {
+        slug: "overwatch-nickname-ideas",
+        title: "오버워치 닉네임 추천 150선: 멋진 영어 아이디 모음",
+        description: "오버워치에 어울리는 영어 닉네임 150개 총정리. 영웅별 컨셉, 히어로 콜사인 스타일, 짓는 법까지 알려드립니다.",
+        date: "2026-09-08",
+        category: "게임 닉네임",
+        tags: ["오버워치닉네임", "오버워치아이디", "오버워치영어이름", "게임닉네임", "히어로닉네임"],
+        readingTime: 6,
+        content: `
+<h2>오버워치 닉네임, 어떻게 지어야 할까?</h2>
+<p>오버워치는 히어로 슈터다. 대사와 감정 표현, 플레이어 카드까지 화면에 이름이 계속 뜨는 게임이라 <strong>오버워치 닉네임은 플레이어의 캐릭터성</strong> 그 자체입니다. 특히 주로 쓰는 히어로가 있다면 그 영웅과 연결된 이름이 정체성을 확실히 만들어 줍니다.</p>
+
+<h3>오버워치 닉네임 3대 스타일</h3>
+<ul>
+<li><strong>히어로 연결 스타일</strong> — 주력 영웅에서 따온 이름 (D.Va 매니아라면 NerfThis, BunnyHopper)</li>
+<li><strong>히어로 콜사인 스타일</strong> — 팀 지원·포지션 컨셉의 이름 (MainTank, PocketHealer)</li>
+<li><strong>쿨하고 짧은 스타일</strong> — 발음 편하고 외우기 쉬운 영어 아이디</li>
+</ul>
+
+<h3>쿨하고 짧은 영어 닉네임 50선</h3>
+<ul>
+<li>Volt, Nova, Pulse, Echo, Zenith</li>
+<li>Astra, Orbit, Comet, Halo, Prism</li>
+<li>Blitz, Surge, Flux, Recoil, Vector</li>
+<li>Nyx, Lumen, Onyx, Frost, Ember</li>
+<li>Drift, Bolt, Quake, Rift, Surge</li>
+<li>Titan, Viper, Fang, Rook, Sable</li>
+<li>Zephyr, Nimbus, Cipher, Echo, Wisp</li>
+<li>Vantage, Talon, Sabre, Nimbus, Vertex</li>
+<li>Arc, Glow, Bolt, Rune, Lark</li>
+<li>Onyx, Halo, Nova, Rune, Vex</li>
+</ul>
+
+<h3>히어로 컨셉 닉네임 50선</h3>
+<ul>
+<li>WinstonJump, GorillaScience, BubbleMaster, PrimalRage, TeslaCannon</li>
+<li>DvaMain, NerfThis, BunnyHopper, MechQueen, SelfDestruct</li>
+<li>GenjiBlade, DragonStrike, ShurikenKing, CyborgNinja, DeflectPro</li>
+<li>HanzoMain, ScatterArrow, DragonArrows, StormBow, SniperHanzo</li>
+<li>ReinCharge, HammerDown, FireStrike, EarthShatter, ShieldWall</li>
+<li>ReaperMain, DeathBlossom, ShadowStep, WraithKing, SoulHarvest</li>
+<li>MercyMain, GuardianAngel, ResurrectPro, Valkyrie, HealBeam</li>
+<li>LucioMain, SoundBarrier, SpeedBoost, WallRider, BeatDrop</li>
+<li>TracerMain, PulseBomb, BlinkMaster, RecallPro, TimeJumper</li>
+<li>ZaryaMain, ParticleWall, GravSurge, EnergyTank, BubbleQueen</li>
+</ul>
+
+<h3>유머러스한 오버워치 닉네임 30선</h3>
+<ul>
+<li>GroupUpWithMe, PressQToWin, NeedHealing, ImBehindYou, ulteconomy</li>
+<li>PotGStealer, FeedOrCarry, SilverRankHell, DiamondDreamer, BronzeLegend</li>
+<li>PayloadHugger, CartPusher, OvertimeKing, SuddenDeathPro, GoldenGun</li>
+<li>EmoteSpammer, SprayArtist, VictoryPoseDance, HelloSpammer, ThanksDva</li>
+<li>AntiFunPolice, ComplainMain, BalancePatch, NerfGenji, BuffMercy</li>
+</ul>
+
+<h3>오버워치 닉네임 지을 때 팁</h3>
+<ul>
+<li><strong>주력 히어로를 정해라</strong>: 최애 히어로가 있으면 이름이 곧 정체성이 됩니다. "저 XX 유저"라고 불리는 재미가 있습니다.</li>
+<li><strong>발음 쉬운 이름이 유리</strong>: 팀원이 부르기 쉬운 이름은 커뮤니케이션에도 도움이 됩니다.</li>
+<li><strong>밈 활용</strong>: 너프디바, 낫힐링 같은 오버워치 밈은 유저들 사이에서 즉시 공감을 얻습니다.</li>
+<li><strong>영어 기준 12~16자</strong>: 너무 길면 채팅창에서 잘리니 짧게 유지하세요.</li>
+</ul>
+
+<h3>AI로 나만의 오버워치 닉네임 만들기</h3>
+<p>150개를 보고도 마음에 드는 게 없다면 직접 만드는 게 정답입니다. 이룸랩 <a href="/naming/english/game">게임 영어 닉네임 제조기</a>에 키워드(예: 히어로, 전장, 쉴드)를 넣으면 오버워치 감성의 영어 닉네임을 즉시 12개 뽑아드립니다. 무료, 로그인 없이 바로 사용 가능합니다.</p>
+
+<div style="background: #fef9c3; border-radius: 12px; padding: 16px; margin-top: 20px; text-align: center;">
+<p style="font-weight: bold; color: #854d0e; margin: 0 0 8px;">🎮 오버워치 감성 닉네임, AI로 뽑기</p>
+<a href="/naming/english/game" style="display: inline-block; background: #a16207; color: white; padding: 10px 24px; border-radius: 8px; font-weight: bold; text-decoration: none;">무료 오버워치 닉네임 생성 →</a>
+</div>
+`
+    },
+    {
+        slug: "youtube-channel-name-ideas",
+        title: "유튜브 채널명 짓기: 기억되는 채널 이름 50선과 공식",
+        description: "유튜브 채널 이름 짓는 법과 좋은 채널명 50선. 카테고리별 스타일, 검색 노출과 브랜딩을 함께 잡는 네이밍 공식을 정리했습니다.",
+        date: "2026-09-08",
+        category: "브랜드 네이밍",
+        tags: ["유튜브채널명", "채널이름추천", "유튜브네이밍", "채널명짓기", "브랜드네이밍"],
+        readingTime: 7,
+        content: `
+<h2>유튜브 채널명, 왜 중요한가</h2>
+<p>유튜브는 채널명이 곧 <strong>검색 키워드이자 브랜드</strong>입니다. 구독자가 추천을 타고 들어왔을 때 채널명이 카테고리를 설명하지 못하면 구독 전환율이 떨어집니다. 반대로 발음 쉽고 주제가 드러나는 이름은 검색 유입과 구독을 동시에 끌어올립니다.</p>
+
+<h3>채널명 3대 공식</h3>
+<ol>
+<li><strong>[주제 단어] + [역할 단어]</strong> — 요리하는 아빠, 주식하는 딸처럼 주제와 페르소나를 동시에 표현</li>
+<li><strong>[이름/닉네임] + [콘텐츠 태그]</strong> — 코딩하는 지식인처럼 개인 브랜드 구축</li>
+<li><strong>조어 브랜드</strong> — 독창적 조어로 프리미엄 이미지 (예: 마이크로큐, 티아이엠)</li>
+</ol>
+
+<h3>카테고리별 추천 채널명 50선</h3>
+<ul>
+<li><strong>재테크/투자</strong>: 월급쟁이 투자일기, 커피 한잔 투자, 숫자로 읽는 경제, 복리연구소, 첫 월급 투자법</li>
+<li><strong>IT/개발</strong>: 코드 한 스푼, 개발자의 노트, 테크 산책, 버그헌터, 화면 너머의 세계</li>
+<li><strong>라이프스타일</strong>: 오늘의 정리, 미니멀 하루, 주말 요리 연구소, 방 구조 대장, 작은 습관 연구</li>
+<li><strong>게임</strong>: 한 판만 더, 공략 저장소, 조작감 연구원, 랭크 올려주는 방, 맵의 모든 것</li>
+<li><strong>리뷰/추천</strong>: 써보고 말하는, 비교하는 사람들, 구매 전에, 가성비 탐정, 직구 다이어리</li>
+</ul>
+
+<h3>채널명 짓는 체크리스트</h3>
+<ul>
+<li><strong>검색 가능성</strong>: 채널명에 주제 단어가 들어가면 검색 노출에 유리합니다. 다만 너무 흔한 단어 조합은 상위 노출 경쟁이 치열합니다.</li>
+<li><strong>발음과 철자</strong>: 말로 전달했을 때 바로 철자가 나오는 이름이 좋습니다. 숫자·특수문자는 최소화.</li>
+<li><strong>확장성</strong>: 주제를 좁게 한정하는 이름(예: 롤만 다루는 채널)은 나중에 주제 확장 시 발목을 잡습니다.</li>
+<li><strong>핸들(@) 확인</strong>: 채널명과 핸들이 달라도 되지만, 일치시키면 검색·공유에 유리합니다.</li>
+<li><strong>상표·유사 채널 확인</strong>: 기존 인기 채널과 유사한 이름은 법적 리스크와 혼동을 유발합니다.</li>
+</ul>
+
+<h3>AI로 채널명 짓기</h3>
+<p>50개를 봐도 마음에 드는 게 없다면 직접 만드는 게 정답입니다. 이룸랩 <a href="/naming/english">영어 닉네임 제조기</a>나 <a href="/naming/brand">브랜드 이름 제조기</a>에 키워드를 넣으면 채널 감성의 이름을 즉시 뽑아드립니다. 무료, 로그인 없이 바로 사용 가능합니다.</p>
+
+<div style="background: #fce7f3; border-radius: 12px; padding: 16px; margin-top: 20px; text-align: center;">
+<p style="font-weight: bold; color: #9d174d; margin: 0 0 8px;">📺 채널명 고민 끝, AI로 뽑기</p>
+<a href="/naming/brand" style="display: inline-block; background: #be185d; color: white; padding: 10px 24px; border-radius: 8px; font-weight: bold; text-decoration: none;">무료 채널명 생성 →</a>
+</div>
+`
+    },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
