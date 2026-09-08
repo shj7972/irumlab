@@ -248,7 +248,7 @@ export default function BrandNamingPage() {
                 </section>
 
             {/* Bottom CTA */}
-            <div className="fixed bottom-0 left-0 right-0 p-5 bg-white/80 backdrop-blur-md border-t border-gray-100 max-w-[480px] mx-auto z-10">
+            <div className="fixed bottom-[108px] left-0 right-0 p-5 bg-white/80 backdrop-blur-md border-t border-gray-100 max-w-[480px] mx-auto z-50">
                 <button
                     onClick={handleSubmit}
                     className="w-full py-4 rounded-xl font-bold text-lg shadow-lg bg-indigo-600 text-white shadow-indigo-200 hover:bg-indigo-700 transition-all active:scale-[0.98] flex items-center justify-center gap-2"

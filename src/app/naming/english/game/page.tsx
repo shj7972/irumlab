@@ -148,7 +148,7 @@ export default function GameEnglishNamingPage() {
             </main>
 
             {/* Bottom CTA */}
-            <div className="fixed bottom-0 left-0 right-0 p-5 bg-white/80 backdrop-blur-md border-t border-gray-100 max-w-[520px] mx-auto z-10">
+            <div className="fixed bottom-[108px] left-0 right-0 p-5 bg-white/80 backdrop-blur-md border-t border-gray-100 max-w-[520px] mx-auto z-50">
                 <button
                     onClick={handleGenerate}
                     className="w-full py-4 rounded-xl font-bold text-lg shadow-lg bg-gray-900 text-white hover:bg-gray-800 transition-all active:scale-[0.98]"
