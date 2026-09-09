@@ -68,6 +68,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: 'monthly',
             priority: 0.6,
         },
+        // 롱테일 가이드 페이지 (배치5 — 영어 닉네임 파생 검색어)
+        ...[
+            'cool-game-nickname',
+            'random-game-nickname',
+            'aesthetic-instagram-nickname',
+            'cute-nickname-generator',
+            'youtube-name-generator',
+            'nickname-maker-site',
+        ].map((slug) => ({
+            url: `${baseUrl}/naming/english/guide/${slug}`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly' as const,
+            priority: 0.8,
+        })),
         {
             url: `${baseUrl}/blog`,
             lastModified: new Date(),
