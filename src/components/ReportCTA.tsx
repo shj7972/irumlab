@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Sparkles, ChevronRight } from "lucide-react";
+import { Sparkles, ChevronRight, PlayCircle } from "lucide-react";
+import { trackCtaClick } from "@/lib/analytics";
 
 interface ReportCTAProps {
     tool: "baby" | "english" | "brand";
@@ -42,6 +43,16 @@ export default function ReportCTA({ tool, contextLabel }: ReportCTAProps) {
                 >
                     리포트 받기 <span className="text-amber-200 line-through text-xs">3,900원</span> 2,900원
                     <ChevronRight size={14} />
+                </Link>
+            </div>
+            <div className="mt-2 pt-2 border-t border-amber-200/60">
+                <Link
+                    href="/naming/report/ad"
+                    onClick={() => trackCtaClick("report_ad_unlock", tool)}
+                    className="inline-flex items-center gap-1 text-xs font-semibold text-gray-500 hover:text-amber-600 transition-colors"
+                >
+                    <PlayCircle size={14} />
+                    광고 보고 무료로 열람하기 (15초)
                 </Link>
             </div>
         </div>
