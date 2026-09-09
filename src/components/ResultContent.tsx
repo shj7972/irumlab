@@ -7,6 +7,7 @@ import { NamingResult } from "@/lib/naming";
 import { Saju, OhaengDistribution } from "@/lib/saju";
 import PremiumAnalysis from "./PremiumAnalysis";
 import ShareButtons from "./ShareButtons";
+import ReportCTA from "./ReportCTA";
 import ShareImageCard from "./ShareImageCard";
 import { trackPremiumUnlockStart, trackPremiumUnlockComplete, trackNamingResultView } from "@/lib/analytics";
 
@@ -263,6 +264,11 @@ export default function ResultContent({ freeNames, lockedNames, saju, distributi
                         </div>
                     )}
                 </div>
+            </div>
+
+            {/* 유료 리포트 CTA — 무료 결과 직후 노출 */}
+            <div className="px-5">
+                <ReportCTA tool="baby" contextLabel="우리 아이 이름" />
             </div>
 
             {/* Premium Analysis Section (Unlocked Only) */}

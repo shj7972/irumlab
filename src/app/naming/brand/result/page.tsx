@@ -7,6 +7,7 @@ import Link from "next/link";
 import { generateAdvancedBrandNames } from "@/lib/brand-naming-advanced";
 import { RefreshCcw, CheckCircle, AlertTriangle, Search, Palette, BarChart } from "lucide-react";
 import ShareButtons from "@/components/ShareButtons";
+import ReportCTA from "@/components/ReportCTA";
 
 function VerificationItem({ label, status, warning }: { label: string, status: boolean, warning?: string }) {
     return (
@@ -138,6 +139,11 @@ function BrandResultPageInner() {
                             </div>
                         </div>
                     ))}
+                </div>
+
+                {/* 유료 리포트 CTA — 무료 결과 직후 노출 */}
+                <div className="mt-8">
+                    <ReportCTA tool="brand" contextLabel="브랜드 이름" />
                 </div>
 
                 <div className="mt-10 flex flex-col items-center gap-4">

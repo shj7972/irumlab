@@ -8,6 +8,7 @@ import { generateAdvancedEnglishNames } from "@/lib/english-naming-advanced";
 import { RefreshCcw, Copy, Gamepad2, Instagram, Youtube, User, Star } from "lucide-react";
 import ShareButtons from "@/components/ShareButtons";
 import ShareImageCard from "@/components/ShareImageCard";
+import ReportCTA from "@/components/ReportCTA";
 
 const PLATFORM_ICONS: Record<string, React.ElementType> = {
     game: Gamepad2,
@@ -92,6 +93,13 @@ function EnglishResultPageInner() {
                         </div>
                     ))}
                 </div>
+
+                {/* 유료 리포트 CTA — 무료 결과 직후 노출 */}
+                {names.length > 0 && (
+                    <div className="mt-8">
+                        <ReportCTA tool="english" contextLabel="선택한 닉네임" />
+                    </div>
+                )}
 
                 <div className="mt-10 flex flex-col items-center gap-5">
                     {/* 이미지 카드 공유 */}

@@ -58,3 +58,16 @@ export function trackCtaClick(ctaName: string, location: string) {
 export function trackCompatibilityCheck() {
     sendEvent("compatibility_check");
 }
+
+// Report (paid) funnel events — 2026-09-09 유료 리포트
+export function trackReportCtaView(tool: string) {
+    sendEvent("report_cta_view", { tool });
+}
+
+export function trackReportCtaClick(tool: string) {
+    sendEvent("report_cta_click", { tool });
+}
+
+export function trackReportPurchase(tool: string, price: number) {
+    sendEvent("report_purchase", { tool, price });
+}
