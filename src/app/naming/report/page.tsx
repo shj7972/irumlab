@@ -1,10 +1,11 @@
 "use client";
 
-import { Suspense, useState } from "react";
+import { Suspense, useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import Header from "@/components/Header";
 import { generateReport, ReportData } from "@/lib/report";
 import { FileDown, Loader2, CheckCircle } from "lucide-react";
+import TossCheckout from "@/components/TossCheckout";
 
 const PRICE = 2900;
 
@@ -19,18 +20,32 @@ function ReportPageInner() {
     const [loading, setLoading] = useState(false);
     const [paid, setPaid] = useState(false);
     const [report, setReport] = useState<ReportData | null>(null);
+    const [showCheckout, setShowCheckout] = useState(false);
+
+    // 결제 성공 후 돌아온 경우 (?paid=1&orderId=...) — 리포트 바로 생성
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        if (params.get("paid") === "1") {
+            const saved = sessionStorage.getItem("reportForm");
+            if (saved) {
+                const f = JSON.parse(saved);
+                setLastName(f.lastName || "");
+                setGender(f.gender || "male");
+                setBirthDate(f.birthDate || "");
+                setBirthTime(f.birthTime || "12:00");
+                const data = generateReport(f.lastName || "김", f.gender || "male", f.birthDate, f.birthTime || "12:00");
+                setReport(data);
+                setPaid(true);
+                sessionStorage.removeItem("reportForm");
+                history.replaceState(null, "", "/naming/report");
+            }
+        }
+    }, []);
 
     function handlePay() {
-        // v1: 결제 SDK 없이 시뮬레이션 — TODO: 토스페이먼츠 위젯 연동
-        // 실제 연동 시: loadTossPayments(NEXT_PUBLIC_TOSS_CLIENT_KEY) → requestPayment
-        // → 성공 콜백에서 서버 승인 검증(토스 시크릿키) → 리포트 생성
-        setLoading(true);
-        setTimeout(() => {
-            const data = generateReport(lastName || "김", gender, birthDate, birthTime);
-            setReport(data);
-            setPaid(true);
-            setLoading(false);
-        }, 800);
+        // 폼 저장 후 토스 결제위젯 표시 (위젯에서 requestPayment → success URL)
+        sessionStorage.setItem("reportForm", JSON.stringify({ lastName, gender, birthDate, birthTime }));
+        setShowCheckout(true);
     }
 
     return (
@@ -100,17 +115,23 @@ function ReportPageInner() {
                             <p className="text-[10px] text-gray-400 mt-1">시간을 모르시면 12:00으로 두셔도 됩니다.</p>
                         </div>
 
-                        <button
-                            onClick={handlePay}
-                            disabled={!birthDate || loading}
-                            className="w-full rounded-xl bg-amber-500 p-4 font-bold text-white disabled:opacity-40 hover:bg-amber-600 transition-colors"
-                        >
-                            {loading ? (
-                                <Loader2 size={18} className="inline animate-spin" /> + " 처리 중..."
-                            ) : (
-                                `결제하고 리포트 받기 (${PRICE.toLocaleString()}원)`
-                            )}
-                        </button>
+                        {showCheckout ? (
+                            <TossCheckout
+                                customerName={lastName + " 고객"}
+                                onApproved={() => setPaid(true)}
+                            />
+                        ) : (
+                            <button
+                                onClick={handlePay}
+                                disabled={!birthDate || loading}
+                                className="w-full rounded-xl bg-amber-500 p-4 font-bold text-white disabled:opacity-40 hover:bg-amber-600 transition-colors"
+                            >
+                                {loading ? (
+                                    <Loader2 size={18} className="inline animate-spin" />
+                                ) : null}
+                                결제하기 ({PRICE.toLocaleString()}원)
+                            </button>
+                        )}
                         <p className="text-[10px] text-gray-400 text-center">
                             디지털 상품 특성상 결제 후 환불이 어렵습니다. · 본 리포트는 재미와 참고용입니다.
                         </p>
