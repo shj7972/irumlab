@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import { generateReport, ReportData } from "@/lib/report";
 import { FileDown, Loader2, CheckCircle } from "lucide-react";
 import TossCheckout from "@/components/TossCheckout";
+import PortOneCheckout from "@/components/PortOneCheckout";
 
 const PRICE = 2900;
 
@@ -116,10 +117,28 @@ function ReportPageInner() {
                         </div>
 
                         {showCheckout ? (
-                            <TossCheckout
-                                customerName={lastName + " 고객"}
-                                onApproved={() => setPaid(true)}
-                            />
+                            process.env.NEXT_PUBLIC_PORTONE_STORE_ID ? (
+                                <PortOneCheckout
+                                    customerName={lastName + " 고객"}
+                                    onApproved={() => {
+                                        const params = new URLSearchParams(window.location.search);
+                                        const f = JSON.parse(sessionStorage.getItem("reportForm") || "{}") || {};
+                                        setLastName(f.lastName || "");
+                                        setGender(f.gender || "male");
+                                        setBirthDate(f.birthDate || "");
+                                        setBirthTime(f.birthTime || "12:00");
+                                        const data = generateReport(f.lastName || "김", f.gender || "male", f.birthDate, f.birthTime || "12:00");
+                                        setReport(data);
+                                        setPaid(true);
+                                        setShowCheckout(false);
+                                    }}
+                                />
+                            ) : (
+                                <TossCheckout
+                                    customerName={lastName + " 고객"}
+                                    onApproved={() => setPaid(true)}
+                                />
+                            )
                         ) : (
                             <button
                                 onClick={handlePay}
