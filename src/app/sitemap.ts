@@ -83,6 +83,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
             'funny-instagram-nickname',
             'company-english-name-generator',
             'aesthetic-cute-nickname',
+            // 배치5-3 (2026-09-22 확장)
+            'valorant-english-nickname',
+            'minecraft-english-nickname',
+            'discord-english-name',
+            'couple-english-nickname',
+            'boy-english-nickname',
+            'girl-english-nickname',
         ].map((slug) => ({
             url: `${baseUrl}/naming/english/guide/${slug}`,
             lastModified: new Date(),
