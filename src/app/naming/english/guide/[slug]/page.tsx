@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import KakaoAdFit from "@/components/KakaoAdFit";
 import { LONGTAIL_PAGES, getLongtailPage, STYLE_LABELS, PLATFORM_LABELS } from "@/lib/english-longtail";
 import { EXAMPLES_BY_STYLE } from "./examples";
+import { getGuideBody, getGuideFaq } from "./guide-content";
 import ReportCTA from "@/components/ReportCTA";
 import { Sparkles, RefreshCcw, ChevronRight } from "lucide-react";
 
@@ -36,6 +37,8 @@ export default async function LongtailGuidePage({ params }: { params: Promise<{ 
 
     const styleLabel = STYLE_LABELS[page.styleId];
     const examples = EXAMPLES_BY_STYLE[page.styleId] || [];
+    const guideBody = getGuideBody(page);
+    const guideFaq = getGuideFaq(page);
     const toolQuery = new URLSearchParams({ platform: page.platform, gender: "neutral", styles: page.styleId });
 
     return (
@@ -79,6 +82,48 @@ export default async function LongtailGuidePage({ params }: { params: Promise<{ 
                 <div className="mt-6">
                     <ReportCTA tool="english" contextLabel="닉네임" />
                 </div>
+
+                {/* 확장 가이드 본문 */}
+                <article className="mt-10 space-y-8 bg-white rounded-2xl border border-gray-200 p-6">
+                    {guideBody
+                        .filter((section) => section.paragraphs.length > 0 || (section.bullets && section.bullets.length > 0))
+                        .map((section, idx) => (
+                            <section key={idx}>
+                                <h2 className="text-lg font-bold text-gray-800 mb-3">{section.heading}</h2>
+                                {section.paragraphs.map((p, pi) => (
+                                    <p key={pi} className="text-sm text-gray-700 leading-relaxed break-keep mb-2">{p}</p>
+                                ))}
+                                {section.bullets && section.bullets.length > 0 && (
+                                    <ul className="mt-2 space-y-2">
+                                        {section.bullets.map((b, bi) => (
+                                            <li key={bi} className="text-sm text-gray-700 leading-relaxed break-keep flex gap-2">
+                                                <span className="text-purple-500 shrink-0">•</span>
+                                                <span>{b}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+                            </section>
+                        ))}
+                    {/* FAQ */}
+                    <section>
+                        <h2 className="text-lg font-bold text-gray-800 mb-4">자주 묻는 질문</h2>
+                        <div className="space-y-3">
+                            {guideFaq.map((f, fi) => (
+                                <details key={fi} className="group border border-gray-200 rounded-xl overflow-hidden">
+                                    <summary className="flex items-center justify-between px-4 py-3 bg-gray-50 cursor-pointer text-sm font-semibold text-gray-800">
+                                        Q. {f.q}
+                                        <ChevronRight size={14} className="text-gray-400 group-open:rotate-90 transition-transform" />
+                                    </summary>
+                                    <div className="px-4 py-3 text-sm text-gray-700 leading-relaxed break-keep">{f.a}</div>
+                                </details>
+                            ))}
+                        </div>
+                    </section>
+                    <p className="text-xs text-gray-400 leading-relaxed border-t border-gray-100 pt-4">
+                        본 가이드는 일반적인 이름짓기 원칙을 정리한 안내입니다. 서비스별 닉네임 정책·길이 제한은 각 플랫폼의 공식 안내를 따릅니다.
+                    </p>
+                </article>
 
                 {/* 관련 페이지 */}
                 <section className="mt-10">
